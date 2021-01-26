@@ -9,7 +9,7 @@
   src: url(https://fonts.frzdb.net/Posterama-Bold.ttf);
 }
 @font-face{
-    font-family:'knuL';
+    font-family:DINPro Condensed Bold;
     font-style:normal;
     font-weight:400;
     src: url(https://fonts.frzdb.net/DINPro-CondBold.woff) format("woff")
@@ -38,7 +38,7 @@ body{
     background: rgba(9, 61, 129, 0.664);
     text-align: center;
     border-radius: 10px;
-    font-family: 'knul';
+    font-family:DINPro Condensed Bold;
     box-shadow: 0 0 10px 0px rgba(9, 61, 129, 0.664);
     transition: 0.5s;
 }
@@ -126,7 +126,7 @@ input[type="button"]:hover,input[type="reset"]:hover{
     text-transform: uppercase;
 }
 #ovr{
-    font-family: 'knuL';
+    font-family:DINPro Condensed Bold;
     font-weight: bolder;
     position: absolute;
     top: 36px;
