@@ -6,11 +6,7 @@
   font-family: 'brizzler';
   font-style: normal;
   font-weight: 400;
-  src: url("https://fonts.frzdb.net/Posterama-Bold.ttf");
-}
-@font-face{
-    src: url('DINPro-CondBold.woff');
-    font-family: 'knul';
+  src: url(https://fonts.frzdb.net/Posterama-Bold.ttf);
 }
 body{
     background: rgb(55, 1, 46);
