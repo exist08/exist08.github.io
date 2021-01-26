@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+  font-family: 'brizzler';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=oPWL_kZkkPk4T8lpg1O2jdrJVDUnJxn7oTmnfIe-0A&skey=35b5d309b586815a&v=v1) format('woff2');
+}
+@font-face{
+    src: url('DINPro-CondBold.woff');
+    font-family: 'knul';
+}
+body{
+    background: rgb(55, 1, 46);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/**************** Form Section ******************************/
+.form{
+    background: rgb(1, 8, 34);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+#head-title{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 150px;
+    background: rgba(9, 61, 129, 0.664);
+    text-align: center;
+    border-radius: 10px;
+    font-family: 'knul';
+    box-shadow: 0 0 10px 0px rgba(9, 61, 129, 0.664);
+    transition: 0.5s;
+}
+#head-title:hover{
+    color: palegoldenrod;
+    box-shadow: 0 0 50px 0px rgba(9, 61, 129, 0.664);
+    transition: 0.5s;
+}
+input,select{
+    background: rgb(55, 1, 46);
+    font-size: 20px;
+    width: 200px;
+    padding: 10px 30px;
+    border: 2px solid red;
+    color: palegoldenrod;
+    outline: none;
+    border-radius: 40px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+input:focus{
+    border: 2px solid rgb(12, 209, 5);
+    transition: 0.5s;
+}
+input[type="button"]{
+    border: 0px solid orangered;
+    box-shadow: 3px 3px 0px 0px orangered,
+                4px 4px 1px 0px orangered;
+    margin: auto;
+    transition: 0.5s;
+}
+input[type="reset"]{
+    padding: none;
+    border: 0px solid orangered;
+    box-shadow: 3px 3px 0px 0px orangered;
+    margin: 5px auto 0px auto;
+}
+input[type="button"]:hover,input[type="reset"]:hover{
+    box-shadow: 0 0 30px orangered;
+    transform: translate(5px,5px);
+    transition: 0.5s;
+    color: palegoldenrod;
+}
+/**************** Container Section ******************************/
+#container{
+    transform: translateY(-100%);
+    z-index: -1;
+    width: 250px;
+    height: 300px;
+    background: rgb(24, 4, 97);
+    border: darkturquoise 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container .card-conatiner{
+    width: inherit;
+    height: inherit;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lavender;
+    font-family: 'brizzler';
+}
+#container .card-conatiner #name{
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 86px;
+    left: auto;
+    font-size: 22px;
+}
+#player-img{
+    position: absolute;
+    width: 256px;
+    bottom: 23px;
+    right: -4px;
+}
+#pos{
+    position: absolute;
+    top: 86px;
+    left: 54px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+#ovr{
+    font-family: 'knul';
+    font-weight: bolder;
+    position: absolute;
+    top: 36px;
+    left: 54px;
+    font-size: 56px;
+}
+#flag{
+    position: absolute;
+    bottom: 120px;
+    left: 54px;
+    width: 40px;
+}
+#program{
+    position: absolute;
+    bottom: 146px;
+    left: 53px;
+    width: 36px;
+}
+
+@keyframes anim{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
