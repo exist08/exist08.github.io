@@ -1,27 +1,20 @@
-const mCard=()=>{
-    let name=document.getElementById('player-name').value;
-    let pos=document.getElementById('player-pos').value;
-    let ovr=document.getElementById('player-ovr').value;
-    let flag=document.getElementById('player-flag').value;
-    // let program=document.getElementById('player-program').value;
-
-    let cardName=document.getElementById('name');
-    let cardPos=document.getElementById('pos');
-    let cardOvr=document.getElementById('ovr');
-    let cardFlag=document.getElementById('flag');
-    let cardPlayer=document.getElementById('player-img');
+window.onload = () => { 
+    var cxzw=document.getElementsByTagName("img");
+    var reuw=document.getElementById("zsc");
+    var jds=0,counter=0;
+    var g=setInterval(func,50);
+    reuw.onblur = ()=>{
+        cxzw[0].src=reuw.value;
+    }
     
-    cardName.innerHTML=name;
-    cardPos.innerHTML=pos;
-    cardOvr.innerHTML=ovr;
-    cardFlag.src=`./flags/${flag}.png`;
-    cardPlayer.src=`./players/${name}.png`;
-
-    let container=document.getElementById('container');
-    container.style.animation='';
-    container.style.animation=`anim 1s linear forwards`;
-};
-const rCard=()=>{
-    let container=document.getElementById('container');
-    container.style.animation='';
+    function func(){
+        if(counter>=60){
+            counter=0;
+            jds=0;
+        }   
+        cxzw[0].style=`left: ${jds}px`;
+        jds-=256;
+        counter++;
+        console.log(counter,jds);
+    };
 };
