@@ -1,52 +1,152 @@
+:root{
+    --green1:#feffde;
+    --green2:#ddffbc;
+    --green3:#91c788;
+    --green4:#52734d;
+}
+
+.light{
+    --backg:var(--green1);
+    --form-bg:var(--green3);
+    --inp-bg:var(--green2);
+    --head-bg:var(--green4);
+    --text:var(--green4);
+}
+
+.dark{
+    --backg:#000;
+    --form-bg:rgb(1, 8, 34);
+    --inp-bg:rgb(55, 1, 46);
+    --head-bg:rgba(9, 61, 129, 0.664);
+    --text:antiquewhite;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
-body{
-    background: #020107;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-.urldiv{
-    background: rgb(4, 151, 48);
-    padding: 3% 8%;
-    border: 3px solid red;
-    border-radius: 15px;
-    box-shadow: 0 0 5px rgb(8, 228, 74),
-                0 0 15px rgb(8, 228, 74),
-                0 0 30px rgb(8, 228, 74),
-                0 0 60px rgb(8, 228, 74);
+@font-face {
+  font-family: 'brizzler';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/l/font?kit=oPWL_kZkkPk4T8lpg1O2jdrJVDUnJxn7oTmnfIe-0A&skey=35b5d309b586815a&v=v1) format('woff2');
 }
 @font-face{
-    src: url(https://fonts.frzdb.net/Posterama-Bold.ttf);
-    font-weight: normal;
-    font-family: 'brizzler';
+    src: url('DINPro-CondBold.woff');
+    font-family: 'knul';
 }
-.urldiv h1{
-    font-family: brizzler;
-    font-style: italic;
-    opacity: 0.8;
+body{
+    transition: background 0.5s ease-in-out,color 1s ease-in-out;
+    background: var(--backg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }
-.urldiv #zsc{
-    border: 5px solid slateblue;
-    background: rgba(248, 247, 250, 0.555);
-    outline: none;
-    border-radius: 15px;
-    padding: 1px 4px;
+/**************** Form Section ******************************/
+.form{
+    background: var(--form-bg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+#head-title{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 150px;
+    background: var(--head-bg);
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    font-family: 'knul';
+    box-shadow: 0 0 10px 0px rgba(9, 61, 129, 0.664);
+    transition: 0.5s;
+    color: antiquewhite;
 }
-.cot8n3r{
-    position: relative;
+#player-name{
+    color: red;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+#head-title:hover{
+    color: palegoldenrod;
+    box-shadow: 0 0 50px 0px rgba(9, 61, 129, 0.664);
+    transition: 0.5s;
+}
+input,select{
+    background: var(--inp-bg);
+    font-size: 20px;
+    width: 200px;
+    padding: 10px 30px;
+    border: 2px solid red;
+    color: var(--text);
+    outline: none;
+    border-radius: 40px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    text-transform: uppercase;
+}
+input:focus{
+    border: 2px solid rgb(12, 209, 5);
+    transition: 0.5s;
+}
+input[type="button"]{
+    border: 0px solid orangered;
+    box-shadow: 0px 0px 0px 0px orangered,
+                4px 4px 1px 0px orangered;
+    margin: auto;
+    transition: 0.5s;
+}
+input[type="reset"]{
+    padding: none;
+    border: 0px solid orangered;
+    box-shadow: 3px 3px 0px 0px orangered;
+    margin: 5px auto 0px auto;
+}
+input[type="button"]:hover,input[type="reset"]:hover{
+    box-shadow: 0 0 30px orangered;
+    transform: translate(3px,3px);
+    transition: 0.5s;
+    background: palegoldenrod;
+    color: rgb(55, 1, 46);
+}
+input[type="button"]:active,input[type="reset"]:active{
+    background: red;
+    color: azure;
+    transition: all 0.5s;
+}
+
+/**************** Container Section ******************************/
+#container{
+    transform: translateY(0%);
+    z-index: -1;
     width: 256px;
     height: 256px;
+    /* background: rgb(24, 4, 97); */
+    /* border: darkturquoise 2px solid; */
     overflow: hidden;
 }
-img{
-    position: absolute;
-    left: -256px;
+#container img{
+    position: relative;
+    overflow: hidden;
+}
+@keyframes anim{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+#switcher{
+    padding: 10px 5px;
+    background: var(--head-bg);
+    border: none;
+    outline: none;
+    box-shadow: 3px 3px 0px #03e4ff;
+    font-size: 18px;
 }
