@@ -2,19 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Animations</title>
+    <title>Card Maker</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </head>
-<body>
-    <div class="urldiv">
-        <h1>BRIZZLER</h1>
-        <input id="zsc" type="url" placeholder="ENTER URL YOU'VE COPIED">
+<body class="light">
+    <button id="switcher">Switch to Dark Mode</button>
+    <div class="getdetails">
+        <form class="form" method="GET">
+            <h3 id="head-title">FIFA CARD ANIMATIONS</h3>
+            <h3 id="player-name">BY BRIZZLER</h3>
+        
+            <select id="player-prog">
+                <option value="BASE">BASE</option>
+                <option value="BECKHAM">BECKHAM</option>
+                <option value="DIVISION_RIVALS">DIVISION RIVALS</option>
+                <option value="FF">FREEZE</option>
+                <option value="GMR">GMR</option>
+                <option value="HARVEST">HARVEST</option>
+                <option value="LEGACY">LEGACY</option>
+                <option value="LUNAR">LUNAR</option>
+                <option value="MARQUEE">MARQUEE</option>
+                <option value="PRIME_ICON">PRIME ICONS</option>
+                <option value="TT">TOP TRANSFER</option>
+                <option value="TOTW_STARTER">TOTW</option>
+                <option value="TOTYU_ATT">UTOTY ATTACKER</option>
+                <option value="TOTYU_MID">UTOTY MIDFIELDER</option>
+                <option value="TOTYU_DEF">UTOTY DEFENDER</option>
+                <option value="TOTYN_ATT">TOTY ATTACKER</option>
+                <option value="TOTYN_MID">TOTY MIDFIELDER</option>
+                <option value="TOTYN_DEF">TOTY DEFENDER</option>
+            </select>
+
+            <select id="player-vers">
+                <option value="ELITE_1">80+</option>
+                <option value="MASTER_1">90+</option>
+                <option value="LEGEND_1">100+</option>
+                <option value="LEGEND_2">110</option>
+            </select>
+            
+            <input type="button" value="Make Card" id="mCard">
+
+            <input type="reset" value="&circlearrowleft;" id="rCard">
+
+        </form>
     </div>
-    <div class="cot8n3r">
-        <img src="./conv_playeranim_TOTYU_ATT_ELITE_1.png" alt="">
+    <div id="container">
+        <img src="https://cdn-p2.frzdb.net/fifamobile/images/sprites_21/conv_playeranim_BASE_ELITE_1.png" id="anim_img">
     </div>
 </body>
 </html>
