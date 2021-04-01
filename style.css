@@ -130,6 +130,22 @@ input[type="button"]:active,input[type="reset"]:active{
     /* border: darkturquoise 2px solid; */
     overflow: hidden;
 }
+.lodaer{
+    z-index: 3;
+    top: 25%;
+    left: 31%;
+    transform: translate(0%,-50%);
+    display: block;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    position: absolute;
+    background: var(--backg);
+    border: 15px solid #45474b;
+    border-top-color: steelblue;
+    border-radius: 50%;
+    animation: anim 1s infinite linear;
+}
 #container img{
     position: relative;
     overflow: hidden;
