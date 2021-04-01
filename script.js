@@ -19,6 +19,7 @@ window.onload= function(){
     var g=setInterval(func,50);
     var mc = document.getElementById('mCard');
     var rc = document.getElementById('rCard');
+    var lder=document.getElementById('lder');
     
     var urll=`https://cdn-p2.frzdb.net/fifamobile/images/sprites_21/conv_playeranim_TT_LEGEND_1.png`;
 
@@ -27,6 +28,8 @@ window.onload= function(){
         var categ=document.getElementById('player-vers').value;
         urll=`https://cdn-p2.frzdb.net/fifamobile/images/sprites_21/conv_playeranim_${prog}_${categ}.png`;
         cxzw[0].src=urll;
+        lder.style.cssText='display:block';
+        cxzw[0].style.cssText='display:none';
     }
     mc.ondblclick=()=>{
         alert("Button is Clicked,\n Wait a moment to get the Animation Completely Loaded😊")
@@ -40,4 +43,9 @@ window.onload= function(){
         jds-=256;
         counter++;
     };
+
+    cxzw[0].addEventListener('load',()=>{
+        lder.style.cssText='display:none';
+        cxzw[0].style.cssText='display:block';
+    })
 };
