@@ -152,10 +152,10 @@ input[type="button"]:active,input[type="reset"]:active{
 }
 @keyframes anim{
     0%{
-        transform: translateY(-100%);
+        transform: rotate(0deg);
     }
     100%{
-        transform: translateY(0%);
+        transform: rotate(360deg);
     }
 }
 #switcher{
