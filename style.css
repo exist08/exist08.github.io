@@ -180,4 +180,10 @@ input[type="button"]:active,input[type="reset"]:active{
     letter-spacing: 1px;
     font-family: 'brizzler';
     text-align: center;
+    text-transform: uppercase;
+}
+@media screen and (max-width:480px){
+    body{
+        flex-direction: column;
+    }
 }
