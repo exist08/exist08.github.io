@@ -25,11 +25,10 @@
     margin: 0;
     padding: 0;
 }
-@font-face {
-  font-family: 'brizzler';
-  font-style: normal;
-  font-weight: 400;
-  src: url(https://fonts.gstatic.com/l/font?kit=oPWL_kZkkPk4T8lpg1O2jdrJVDUnJxn7oTmnfIe-0A&skey=35b5d309b586815a&v=v1) format('woff2');
+@font-face{
+    src: url(https://fonts.frzdb.net/Posterama-Bold.ttf);
+    font-weight: normal;
+    font-family: 'brizzler';
 }
 @font-face{
     src: url('DINPro-CondBold.woff');
@@ -40,8 +39,14 @@ body{
     background: var(--backg);
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-evenly;
+    align-items: center;
+}
+.card-finder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 /**************** Form Section ******************************/
@@ -159,10 +164,20 @@ input[type="button"]:active,input[type="reset"]:active{
     }
 }
 #switcher{
+    position: absolute;
+    top: 0;
     padding: 10px 5px;
     background: var(--head-bg);
     border: none;
     outline: none;
     box-shadow: 3px 3px 0px #03e4ff;
     font-size: 18px;
+}
+#setter{
+    margin-top: 40px;
+    font-size: 30px;
+    color: whitesmoke;
+    letter-spacing: 1px;
+    font-family: 'brizzler';
+    text-align: center;
 }
