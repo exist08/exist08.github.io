@@ -48,4 +48,9 @@ window.onload= function(){
         lder.style.cssText='display:none';
         cxzw[0].style.cssText='display:block';
     })
+    var getter=document.getElementById('getter');
+    var setter=document.getElementById('setter');
+    getter.onkeyup = ()=>{
+        setter.innerHTML=getter.value;
+    }
 };
