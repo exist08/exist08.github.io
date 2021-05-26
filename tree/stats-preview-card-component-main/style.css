@@ -28,16 +28,6 @@ body{
     border-radius: 10px;
     overflow: hidden;
     display: flex;
-    position: relative;
-}
-.container::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -50%;
-    width: 100%;
-    background-image: url(/CSS_Challanges/stats-preview-card-component-main/stats-preview-card-component-main/design/desktop-preview\ -\ Copy.jpg);
-    z-index: 10;
 }
 .container .intro{
     width: 600px;
