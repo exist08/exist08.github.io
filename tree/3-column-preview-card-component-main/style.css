@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'big-shoulders';
+    src: url(/fonts/BigShouldersDisplay-Bold.ttf);
+}
+@font-face {
+    font-family: 'lexend';
+    src: url(/fonts/LexendDeca-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+.container{
+    width: 900px;
+    height: 500px;
+    background: cyan;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .cards{
+    width: 300px;
+    height: 500px;
+    font-family: 'lexend';
+    font-size: 1em;
+    padding: 1.5em 3em 1.5em 3em;
+    box-sizing: border-box;
+    position: relative;
+}
+.container .cards>*{
+    position: absolute;
+}
+
+.container .cards p{
+    padding-right: inherit;
+    top: 40%;
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 3.4vh;
+}
+.container .cards h4{
+    top: 25%;
+    color: hsl(0, 0%, 95%);
+    font-size: 2.5em;
+    font-family: 'big-shoulders';
+    text-transform: uppercase;
+}
+.container .cards button{
+    bottom: 9%;
+}
+.container a{
+    top: 9%;
+}
+
+.container .cards:nth-child(1){
+    background: hsl(31, 77%, 52%);
+}
+.container .cards:nth-child(2){
+    background: hsl(184, 100%, 22%);
+}
+.container .cards:nth-child(3){
+    background: hsl(179, 100%, 13%);
+}
+
+.container .cards:nth-child(1) .learn-more{
+    color: hsl(31, 77%, 52%);
+}
+.container .cards:nth-child(2) .learn-more{
+    color: hsl(184, 100%, 22%);
+}
+.container .cards:nth-child(3) .learn-more{
+    color: hsl(179, 100%, 13%);
+}
+
+.learn-more{
+    box-sizing:content-box;
+    border: none;
+    outline: none;
+    background: hsl(0, 0%, 95%);
+    font-size: 1em;
+    padding: 1em 2em;
+    font-family: 'lexend';
+    border-radius: 30px;
+    color: black;
+}
+
+
+@media  screen and (max-width:376px) {
+    body{
+        width: 100%;
+    }
+    .container{
+        margin: 20% 0;
+        width: 300px;
+        min-height: 1200px;
+        flex-direction: column;
+        overflow: auto;
+    }
+}
