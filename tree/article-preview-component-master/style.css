@@ -1,0 +1,258 @@
+:root{
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+@font-face {
+    font-family: 'manrope-700';
+    src: url(./fonts/Manrope-Bold.ttf);
+}
+@font-face {
+    font-family: 'manrope-500';
+    src: url(./fonts/Manrope-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 13px;
+    background: var(--light-grayish-blue);
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 730px;
+    height: 280px;
+    box-shadow: 5px 5px 205px 0px rgba(0, 0, 0, 0.151);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.card .imgBox{
+    height: 100%;
+    width: 39%;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.card .imgBox img{
+    height: 100%;
+}
+
+.card .txtBox{
+    width: 61%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 3em;
+    background: white;
+    /* background-clip: content-box; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.card .txtBox p.head{
+    font-size: 1.5em;
+    font-family: 'manrope-700';
+    color: var(--very-dark-grayish-blue);
+}
+.card .txtBox p.msg{
+    font-size: 1em;
+    font-family: 'manrope-500';
+    color: var(--desaturated-dark-blue);
+}
+
+
+.card .infoBox{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card .infoBox img.avatar{
+    height: 100%;
+    border-radius: 50%;
+}
+.card .infoBox .info{
+    width: 70%;
+    height: 100%;
+    /* background: palevioletred; */
+    box-sizing: border-box;
+    padding-left: 2em;
+}
+.card .infoBox .info span{
+    display: block;
+}
+.card .infoBox .info span:nth-child(1){
+    font-family: 'manrope-700';
+    color: var(--very-dark-grayish-blue);
+}
+.card .infoBox .info span:nth-child(2){
+    font-family: 'manrope-500';
+    color:var(--grayish-blue);
+}
+
+.card .infoBox .share{
+    margin-left: 20px;
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+.share button{
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#share{
+    fill: #6E8098;
+    transition: 0.5s;
+}
+/* .share:hover #share{
+    fill: white;
+} */
+
+.card .infoBox .share button:focus {
+    background: var(--desaturated-dark-blue);
+    overflow: visible;
+    transition: 1s;
+}
+.card .infoBox .share button:focus #share{
+    fill: white;
+}
+.card .infoBox .share button:focus + .share-sec{
+    opacity: 1;
+}
+
+.share .share-sec{
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    left: -95px;
+    width: 250px;
+    height: 55px;
+    background: var(--very-dark-grayish-blue);
+    top: -75px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.253);
+}
+.share-sec .share-txt{
+    font-family: 'manrope-500';
+    color: var(--grayish-blue);
+    letter-spacing: 4px;
+}
+.share .share-sec::before{
+    position: absolute;
+    content: '';
+    top: calc(100% - 10px);
+    left: calc(45% - 10px);
+    width: 20px;
+    height: 20px;
+    background: inherit;
+    transform: rotate(45deg);
+}
+
+
+
+@media screen and (max-width:480px) {
+    body{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        /* padding: 3em 2em; */
+    }
+    .card{
+        background: red;
+        width: 340px;
+        height: 510px;
+        display: flex;
+        flex-direction: column;
+    }
+    .card .imgBox{
+        width: 100%;
+        height: 39%;
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+    .card .imgBox img{
+        height: auto;
+        width: 100%;
+        transform: translateY(-5%);
+    }
+
+    .card .txtBox{
+        padding: 2em 3em 1em 2em;
+        width: 100%;
+        height: 69%;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 10px;
+        justify-content: space-between;
+    }
+    .card .txtBox .msg{
+        line-height: 2em;
+        font-size: 23px;
+    }
+    
+    .share{
+        position: relative;
+    }
+    .share .share-sec{
+        position: absolute;
+        left: -268px;
+        width: 340px;
+        height: 70px;
+        top: -15px;
+        border-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding-right: 8em;
+        display: none;
+    }
+    .share .share-sec::before{
+        position: absolute;
+        display: none;
+    }
+
+    
+    .card .infoBox .share button:focus {
+        z-index: 2;
+    }
+    .card .infoBox .share button:focus + .share-sec{
+        display: flex;
+    }
+    
+
+}
+
+
+
