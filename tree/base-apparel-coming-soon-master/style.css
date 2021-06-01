@@ -1,0 +1,231 @@
+:root{
+    --desaturated-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --dark-grayish-red: hsl(0, 6%, 24%);
+}
+
+@font-face {
+    font-family: 'josefin-sans-300';
+    src: url(./fonts/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: 'josefin-sans-400';
+    src: url(./fonts/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'josefin-sans-600';
+    src: url(./fonts/JosefinSans-SemiBold.ttf);
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    font-size: 16px;
+}
+.container{
+    width: 100%;
+    /* background: #ff634734; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container>*{
+    margin-left: 14em;
+}
+nav{
+    position: absolute;
+    left: 15%;
+    top: 5%;
+}
+
+.intro h2{
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+.intro h2.light{
+    font-family: 'josefin-sans-300';
+    font-size: 3em;
+    font-weight: normal;
+    color: var(--desaturated-red);
+}
+.intro h2.bold{
+    font-family: 'josefin-sans-400';
+    font-size: 3em;
+    color: var(--dark-grayish-red);
+    margin-bottom: 0.5em;
+    width: 450px;
+}
+.intro p.para{
+    font-family: 'josefin-sans-400';
+    color: var(--desaturated-red);
+    margin-bottom: 2em;
+    width: 450px;
+}
+
+form{
+    display: block;
+    width: 450px;
+    height: 50px;
+    border: 2px solid var(--desaturated-red);
+    border-radius: 30px;
+    position: relative;
+}
+form.invalid{
+    border: 2px solid var(--soft-red);
+}
+form.invalid button::before{
+    position: absolute;
+    content: url(./images/icon-error.svg);
+    left: -40%;
+}
+
+form>*{
+    border-radius: 30px;
+}
+form input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 2em;
+    font-family: 'josefin-sans-400';
+    color: var(--desaturated-red)
+}
+form button{
+    position: absolute;
+    right: -25px;
+    top: -5%;
+    height: 110%;
+    width: 100px;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+form button:hover{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+span#text{
+    display: block;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    font-family: 'josefin-sans-400';
+}
+
+.img1{
+    display: none;
+}
+
+@media screen and (max-width:1120px){
+    .container>*{
+        margin-left: 0em;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    nav{
+        position: absolute;
+        left: 10%;
+        top: 3%;
+    }
+    .container .intro{
+        text-align: center;
+        padding: 4em 1em;
+    }
+}
+
+@media screen and (max-width:560px) {
+    nav{
+        left: 15%;
+        top: 5%;
+    }
+    .container>*{
+        margin-left: 0em;
+        margin-top: 4em;
+    }
+    .img2{
+        display: none;
+    }
+    .img1{
+        display: block;
+    }
+    .container{
+        width: 375px;
+        margin: auto;
+        /* background: #ff634734; */
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: start;
+        margin-top: 2em;
+    }
+    .container .intro{
+        text-align: center;
+        padding: 0em 1em;
+        /* background: red; */
+    }
+
+    .intro h2{
+        text-transform: uppercase;
+        letter-spacing: 10px;
+    }
+    .intro h2.light{
+        font-family: 'josefin-sans-300';
+        font-size: 3em;
+        font-weight: normal;
+        color: var(--desaturated-red);
+    }
+    .intro h2.bold{
+        font-family: 'josefin-sans-400';
+        font-size: 3em;
+        color: var(--dark-grayish-red);
+        margin-bottom: 0.5em;
+        width: 100%;
+    }
+    .intro p.para{
+        font-family: 'josefin-sans-400';
+        color: var(--desaturated-red);
+        margin-bottom: 2em;
+        width: 100%;
+    }
+    form{
+        display: block;
+        width: 100%;
+        height: 50px;
+        /* border: 1px solid var(--desaturated-red); */
+        border-radius: 30px;
+        position: relative;
+    }
+    form input{
+        border: none;
+        outline: none;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 0 2em;
+        font-family: 'josefin-sans-400';
+        color: var(--desaturated-red)
+    }
+    form button{
+        position: absolute;
+        right: -25px;
+        top: -5%;
+        height: 110%;
+        width: 100px;
+        background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    
+}
