@@ -1,0 +1,279 @@
+:root{
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+
+    --blue: hsl(248, 32%, 49%);
+    --dark-blue: hsl(249, 10%, 26%); 
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+@font-face {
+    font-family: 'poppins-400';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'poppins-500';
+    src: url(./fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: 'poppins-600';
+    src: url(./fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'poppins-700';
+    src: url(./fonts/Poppins-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    background: url(./images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--red);
+}
+.container{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    /* background: palegoldenrod; */
+    box-sizing: border-box;
+    padding: 2em 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    width: 50%;
+    color: white;
+    /* background: orchid; */
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* text-align: center; */
+}
+.intro .heading{
+    font-family: 'poppins-700' ;
+    font-size: 4em;
+}
+.intro .para{
+    font-family: 'poppins-400';
+    font-size: 1.1em;
+}
+
+.outro{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* background: cornflowerblue; */
+    height: 550px;
+}
+.outro .offer{
+    color: white;
+    background: var(--blue);
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0.75em 0em;
+    text-align: center;
+    font-family: 'poppins-700';
+    box-shadow: 0 10px 0 rgba(0,0,0,0.2);
+}
+.outro .offer .less-vsbl{
+    font-family: 'poppins-400';
+}
+
+.outro form{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 1.5em;
+    background: white;
+    border-radius: 10px;
+}
+form input{
+    font-family: 'poppins-600';
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding-left: 20px;
+}
+form button{
+    border: none;
+    outline: none;
+    color: white;
+    background: var(--green);
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'poppins-400';
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+}
+form button:active{
+    background: gray;
+}
+form .t-n-s{
+    /* background: cornflowerblue; */
+    text-align: center;
+    font-family: 'poppins-500';
+    font-size: 0.8em;
+    color: var(--grayish-blue);
+}
+
+form.invalid input{
+    border: 2px solid var(--red);
+}
+form.invalid input + span::before{
+    position: absolute;
+    content: url(./images/icon-error.svg);
+    /* width: 20px; */
+    /* height: 20px; */
+    /* background: black; */
+    top: -225%;
+    right: 5%;
+}
+form.invalid span{
+    position: relative;
+    color: var(--red);
+    font-family: 'poppins-400';
+    font-style: italic;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+form .t-n-s .in-red{
+    font-family: 'poppins-500';
+    font-size: 0.8em;
+    color: var(--red);
+    font-style: normal;
+}
+
+
+
+@media screen and (max-width:540px) {
+    body{
+        background: url(./images/bg-intro-mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: var(--red);
+    }
+    .container{
+        margin: auto;
+        width: 375px;
+        /* background: palegoldenrod; */
+        box-sizing: border-box;
+        padding: 2em 1em;
+        display: block;
+    }
+
+    .intro{
+        color: white;
+        /* background: orchid; */
+        width: 100%;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+    }
+    .intro .heading{
+        font-family: 'poppins-700' ;
+        font-size: 2em;
+    }
+    .intro .para{
+        font-family: 'poppins-400';
+        font-size: 1.1em;
+    }
+
+    .outro{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* background: cornflowerblue; */
+        height: 550px;
+    }
+    .outro .offer{
+        color: white;
+        background: var(--blue);
+        border-radius: 10px;
+        width: 100%;
+        height: 100px;
+        box-sizing: border-box;
+        padding: 1.5em 4em;
+        text-align: center;
+        font-family: 'poppins-700';
+        box-shadow: 0 10px 0 rgba(0,0,0,0.5);
+    }
+    .outro .offer .less-vsbl{
+        font-family: 'poppins-400';
+    }
+
+    .outro form{
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+        padding: 1.5em;
+        background: white;
+        border-radius: 10px;
+    }
+    form input{
+        font-family: 'poppins-600';
+        box-sizing: border-box;
+        width: 100%;
+        height: 50px;
+        border: 1px solid rgba(0,0,0,0.5);
+        border-radius: 5px;
+        padding-left: 20px;
+    }
+    form button{
+        border: none;
+        outline: none;
+        color: white;
+        background: var(--green);
+        border-radius: 10px;
+        width: 100%;
+        height: 50px;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: 'poppins-400';
+        font-size: 1em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        box-shadow: 0 5px 0 rgba(0,0,0,0.5);
+    }
+    form .t-n-s{
+        /* background: cornflowerblue; */
+        text-align: center;
+        font-family: 'poppins-500';
+        font-size: 0.8em;
+        color: var(--grayish-blue);
+    }
+    form .t-n-s .in-red{
+        color: var(--red);
+        font-size: 0.8em;
+    }
+    
+}
+
+
