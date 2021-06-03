@@ -1,0 +1,139 @@
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+}
+
+@font-face {
+    font-family: 'karla-400';
+    src: url(./fonts/Karla-Regular.ttf);
+}
+@font-face {
+    font-family: 'karla-700';
+    src: url(./fonts/Karla-Bold.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: grid;
+    grid-template-areas:
+        "top top"
+        "left right";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 4fr 5fr;
+    width: 635px;
+    height: 475px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.box .join-our{
+    background: white;
+    padding: 2em;
+    grid-area: top;
+    height: 100%;
+}
+.join-our h2.cyan{
+    color: var(--cyan);
+    font-family: 'karla-700';
+    padding-bottom: 1em;
+}
+.join-our p.yellow{
+    color: var(--bright-yellow);
+    font-family: 'karla-700';
+    padding-bottom: 1em;
+}
+.join-our p.para{
+    color: rgba(0,0,0,0.5);
+    font-family: 'karla-400';
+}
+
+h3.head{                        /* Common in Monthly Subscription & Why Us */
+    font-family: 'karla-700';
+    padding-bottom: 1em;
+}
+
+
+.box .subs{
+    color: white;
+    background: var(--cyan);
+    padding: 2em;
+    grid-area: left;
+}
+.subs p.price{
+    font-family: 'karla-700';
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5em;
+}
+.subs p.price .less-vsbl{
+    color: rgba(255,255,255,0.6);
+    font-family: 'karla-400';
+    font-size: 0.5em;
+}
+.subs p.bottom{
+    font-family: 'karla-400';
+    padding-bottom: 1.5em;
+}
+.subs button.sign-up{
+    color: white;
+    font-family: 'karla-700';
+    font-size: 1.5em;
+    width: 100%;
+    height: 50px;
+    background: var(--bright-yellow);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.box .why-us{
+    color: white;
+    background: hsla(179, 62%, 43%, 0.75);
+    padding: 2em;
+    grid-area: right;
+}
+.why-us ul{
+    list-style: none;
+}
+.why-us ul li{
+    color: rgba(255,255,255,0.8);
+    font-family: 'karla-400';
+    font-size: 1em;
+}
+
+@media screen and (max-width:540px) {
+    .box{
+        width: 310px;
+        height: 720px;
+        
+        grid-template-areas:
+            "top"
+            "left"
+            "right";
+        grid-template-columns: 1fr;
+        grid-template-rows: 5fr 3fr 4fr;
+    }
+}
