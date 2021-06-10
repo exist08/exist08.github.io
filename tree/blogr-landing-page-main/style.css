@@ -505,7 +505,7 @@ footer .logo{
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .heading{
+    .heading,p{
         text-align: center;
     }
     /*/////////////////   intro End     //////////////////////*/
