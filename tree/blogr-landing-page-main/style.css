@@ -1,0 +1,618 @@
+@font-face {
+    font-family: 'overpass-300';
+    src: url(./fonts/Overpass-Light.ttf);
+}
+@font-face {
+    font-family: 'overpass-600';
+    src: url(./fonts/Overpass-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'ubuntu-400';
+    src: url(./fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+    font-family: 'ubuntu-500';
+    src: url(./fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: 'ubuntu-700';
+    src: url(./fonts/Ubuntu-Bold.ttf);
+}
+
+:root{
+    --light-red: hsl(356, 100%, 66%);
+    --very-light-red: hsl(355, 100%, 74%);
+    --very-light-blue: hsl(208, 49%, 24%);  /*headings*/
+
+    --grayish-blue: hsl(240, 2%, 79%);  /*footer text*/
+    --very-dark-grayish-blue: hsl(207, 13%, 34%);   /*body copy*/
+    --very-dark-black-blue: hsl(240, 10%, 16%); /*footer background*/
+
+    --gradient: linear-gradient(hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+}
+.light{
+    --text-color:black;
+    background: white;
+}
+.dark{
+    --text-color:white;
+    background: #000000ce;
+    transition: color 0.5s, background 1s;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 16px;
+    width: 100%;
+    transition: color 0.5s, background 1s;
+}
+.container{
+    width: 100%;
+}
+.head{
+    width: 100%;
+    height: 500px;
+    background: var(--gradient);
+    position: relative;
+    border-bottom-left-radius: 100px;
+    box-sizing: border-box;
+    padding: 2em 0;
+}
+.head .overlay{
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./images/bg-pattern-intro.svg);
+    background-position: center;
+    background-size: 125%;
+}
+.hamburger{
+    display: none;
+}
+
+/*/////////////////    .head nav Start     //////////////////////*/
+.head nav{
+    margin: auto;
+    width: 80%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+nav .logo{
+    width: 100px;
+    height: 40px;
+    background-image: url(./images/logo.svg);
+}
+nav .dropdowns{
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'ubuntu-400';
+}
+nav .dropdowns .triple-dropdowns{
+    display: flex;
+}
+.has-dropdown{
+    width: 90px;
+    height: 20px;
+    margin-right: 20px;
+    text-align: left;
+    transition: 0.5s;
+    position: relative;
+}
+.has-dropdown a{
+    text-decoration: none;
+    color: #ffffffd8;
+    width: 100%;
+    position: relative;
+}
+.has-dropdown a::after{
+    position: absolute;
+    content: '';
+    background-image: url(./images/icon-arrow-light.svg);
+    width: 10px;
+    height: 6px;
+    right: -40%;
+    top: calc(50% - 3px);
+}
+.has-dropdown ul{
+    position: absolute;
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.has-dropdown:hover ul{
+    height: 200px;
+}
+
+.login-panel{
+    width: 180px;
+    height: 40px;
+    /* background: black; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.login-panel button{
+    font-family: 'ubuntu-500';
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    outline: none;
+    background: none;
+}
+.login-panel button.active{
+    font-family: 'ubuntu-700';
+    border-radius: 20px;
+    background: white;
+    color: var(--light-red);
+}
+/*/////////////////   .head  nav End     //////////////////////*/
+
+/*/////////////////   .head .head-body Start     //////////////////////*/
+.head .head-body{
+    text-align: center; 
+    color: white;
+    position: relative;
+}
+.head-body h1{
+    font-size: 4em;
+    font-family: 'overpass-600';
+    margin-top: 1em;
+}
+.head-body h2{
+    font-family: 'overpass-600';
+    margin-top: 1em;
+}
+.buttons{
+    margin: auto;
+    width: 250px;
+    height: 40px;
+    /* background: black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3em;
+}
+.buttons button{
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    background: none;
+    border-radius: 20px;
+    font-family: 'ubuntu-700';
+}
+.buttons button.active{
+    border-radius: 20px;
+    background: white;
+    color: var(--light-red);
+    border: none;
+    outline: none;
+}
+/*/////////////////   .head .head-body End     //////////////////////*/
+
+
+/*/////////////////   intro Start     //////////////////////*/
+.intro{
+    box-sizing: border-box;
+    padding-left: 10em;
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 
+            "topper topper"
+            "lefttop toptobottomright"
+            "leftbottom toptobottomright";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    color: var(--text-color);
+}
+.whole-top{grid-area: topper; background: none;}
+.top-bottom-right{grid-area: toptobottomright;}
+.left-top{grid-area: lefttop;}
+.left-bottom{grid-area: leftbottom;}
+
+.heading{
+    font-family: 'overpass-600';
+}
+.intro>.heading{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.articles{
+    box-sizing: border-box;
+    padding: 0 6em;
+}
+.articles p{
+    margin-top: 2em;
+    font-family: 'overpass-300';
+    line-height: 1.5em;
+}
+.top-bottom-right{
+    background: url(./images/illustration-editor-desktop.svg);
+    background-position:bottom left; 
+    /* background-size: cover; */
+}
+/*/////////////////   intro End     //////////////////////*/
+
+
+/*/////////////////   middle Start     //////////////////////*/
+.middle{
+    background: var(--very-light-blue);
+    height: 300px;
+    position: relative;
+    /* overflow: hidden; */
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    display: flex;
+}
+.middle .mobiles{
+    padding-left: 4em;
+    width: 100%;    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle .articles{
+    color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.middle .articles p{
+    box-sizing: border-box;
+    padding-right: 6em;
+    width: 100%;
+}
+/*/////////////////   middle End     //////////////////////*/
+
+
+/*/////////////////   bottom Start     //////////////////////*/
+.bottom{
+    box-sizing: border-box;
+    padding-right: 10em;
+    height: 800px;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+            "toptobottomleft righttop "
+            "toptobottomleft rightbottom ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    color: var(--text-color);
+}
+.top-bottom-left{grid-area: toptobottomleft;}
+.right-top{grid-area: righttop;}
+.right-bottom{grid-area: rightbottom;}
+
+.heading{
+    font-family: 'overpass-600';
+}
+
+.bottom .articles{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 6em;
+}
+.articles p{
+    margin-top: 2em;
+    font-family: 'overpass-300';
+    line-height: 1.5em;
+}
+.top-bottom-left{
+    background: url(./images/illustration-laptop-desktop.svg);
+    background-position:bottom right; 
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+/*/////////////////   bottom End     //////////////////////*/
+
+
+/*/////////////////   footer Start     //////////////////////*/
+
+footer{
+    background: var(--very-dark-black-blue);
+    height: 300px;
+    color: white;
+    display: flex;
+    border-top-right-radius: 100px;
+    box-sizing: border-box;
+    padding: 4em 2em;
+}
+footer>*{
+    width: 100%;
+}
+footer ul h4{
+    font-family: 'overpass-600';
+    margin-bottom: 1em;
+}
+footer ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer ul li{
+    list-style-type: none;
+    font-family: 'overpass-300';
+}
+footer .logo{
+    background-image: url(./images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+/*/////////////////   footer End     //////////////////////*/
+
+
+
+/*/////////////////   Media Queries     //////////////////////*/
+@media screen and (max-width:540px) {
+    .head nav{
+        position: relative;
+    }
+    nav .dropdowns.active{
+        all: unset;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        width: 100%;
+        font-family: 'overpass-600';
+        border-radius: 10px;
+        box-shadow: 0 0 100px rgba(0,0,0,0.5);
+        transition: 0.5s;
+    }
+    nav .dropdowns{
+        display: none;
+        transition: 0.5s;
+    }
+    .dropdowns .triple-dropdowns{
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+    .triple-dropdowns .has-dropdown>*{
+        color: black;
+    }
+
+    .dropdowns .login-panel{
+        height: 100px;
+    }
+    .triple-dropdowns .has-dropdown{
+        height: 30px;
+        width: 150px;
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    .has-dropdown ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 1em;
+    }
+    .has-dropdown:hover{
+        background: rgba(0,0,0,0.1);
+        height: 200px;
+        overflow: visible;
+    }
+    .has-dropdown:hover a{
+        background: cornflowerblue;
+    }
+    .dropdowns .login-panel{
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+    .login-panel button{
+        font-family: 'ubuntu-500';
+        padding: 10px 20px;
+        color: black;
+        border: none;
+        outline: none;
+        background: none;
+    }
+    .login-panel button.active{
+        font-family: 'ubuntu-700';
+        border-radius: 20px;
+        background: var(--gradient);
+        color: white;
+    }
+
+    .hamburger{
+        display: block;
+        background-image: url(./images/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        width: 50px;
+        height: 20px;
+        position: relative;
+        transition: 0.5s;
+    }
+    .hamburger.active{
+        background-image: url(./images/icon-close.svg);
+        transition: 0.5s;
+    }
+    .head-body h1{
+        font-size: 3em;
+        font-family: 'overpass-600';
+        margin: 0 0.5em;
+        margin-top: 1em;
+    }
+    .head-body h2{
+        font-family: 'overpass-600';
+        margin: 0 1em;
+        margin-top: 1em;
+    }
+    .buttons{
+        margin: auto;
+        width: 300px;
+        height: 40px;
+        /* background: black; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 3em;
+    }
+    
+/*/////////////////   intro Start     //////////////////////*/
+    .intro{
+        box-sizing: border-box;
+        padding-left: 0em;
+        min-height: 1200px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+                "topper"
+                "toptobottomright"
+                "lefttop"
+                "leftbottom";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 4fr 3fr;
+    }
+    .top-bottom-right{
+        background: url(./images/illustration-editor-mobile.svg);
+        background-position: center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .heading{
+        text-align: center;
+    }
+    /*/////////////////   intro End     //////////////////////*/
+
+
+    /*/////////////////   middle Start     //////////////////////*/
+    .middle{
+        background: var(--very-light-blue);
+        height: 700px;
+        position: relative;
+        /* overflow: hidden; */
+        border-bottom-left-radius: 100px;
+        border-top-right-radius: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    .middle .mobiles{
+        padding-left: 0em;
+        width: 100%;    
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .middle .mobiles img{
+        width: 100%;
+        margin-top: -50px;
+    }
+    .middle .articles{
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .middle .articles p{
+        box-sizing: border-box;
+        padding-right: 0em;
+        width: 100%;
+        text-align: center;
+    }
+    /*/////////////////   middle End     //////////////////////*/
+
+    /*/////////////////   bottom Start     //////////////////////*/
+    .bottom{
+        box-sizing: border-box;
+        padding-right: 0em;
+        min-height: 900px;
+        width: 100%;
+        display: grid;
+        grid-template-areas: 
+                "toptobottomleft"
+                "righttop"
+                "rightbottom";
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 1.5fr; 
+    }
+    .bottom .top-bottom-left{
+        background: url(./images/illustration-laptop-desktop.svg);
+        background-position:center; 
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .bottom .articles{
+        display: block;
+        text-align: center;
+    }
+    .bottom .articles.right-top{
+        box-sizing: border-box;
+        padding-top: 1em;
+    }
+    /*/////////////////   bottom End     //////////////////////*/
+
+    /*/////////////////   footer Start     //////////////////////*/
+    
+    footer{
+        background: var(--very-dark-black-blue);
+        height: 600px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        border-top-right-radius: 100px;
+        box-sizing: border-box;
+        padding: 2em 2em;
+    }
+    footer>*{
+        width: 100%;
+        margin-bottom: 2em;
+        height: 100%;
+    }
+    footer ul h4{
+        font-family: 'overpass-600';
+        margin-bottom: 1em;
+    }
+    footer ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer ul li{
+        list-style-type: none;
+        font-family: 'overpass-300';
+    }
+    /*/////////////////   footer End     //////////////////////*/
+
+
+}
