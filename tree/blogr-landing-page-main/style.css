@@ -616,3 +616,33 @@ footer .logo{
 
 
 }
+
+
+@media screen and (max-width:376px) {
+    .head{
+        height: 550px;
+    }
+    
+/*/////////////////   intro Start     //////////////////////*/
+    .intro{
+        margin: 4em 0;
+        text-align: center;
+    }
+    .top-bottom-right{
+        background: url(./images/illustration-editor-mobile.svg);
+        background-position: center; 
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .heading{
+        text-align: center;
+    }
+    /*/////////////////   intro End     //////////////////////*/
+
+    /*/////////////////   bottom Start     //////////////////////*/
+    .bottom{
+        margin: 2em 0;
+    }
+    /*/////////////////   bottom End     //////////////////////*/
+
+}
