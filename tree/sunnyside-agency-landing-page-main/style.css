@@ -325,4 +325,7 @@ ul.links{
     display: flex;
     justify-content: space-between;
 }
+.footer li:hover{
+    cursor:pointer;
+}
 /********************   Footer End    ********************/
