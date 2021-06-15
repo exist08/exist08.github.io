@@ -114,7 +114,7 @@
     /********************   Cards-Section End    ********************/
 }
 
-@media screen and (max-width:376px) {
+@media screen and (max-width:385px) {
     .container {
         width: 375px;
     }
