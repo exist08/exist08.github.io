@@ -1,0 +1,401 @@
+@media screen and (max-width:540px) {
+    .container {
+        width: 100%;
+    }
+    .head {
+        width: 100%;
+        height: 100vh;
+        background-image: url(./images/mobile/image-header.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .head nav {
+        position: relative;
+    }
+    .head nav .hamburger {
+        display: block;
+        background-image: url(./images/icon-hamburger.svg);
+        width: 24px;
+        height: 18px;
+    }
+    .head nav ul {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: whitesmoke;
+        height: 300px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+    }
+    .head nav ul {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .head nav ul.active {
+        width: 95%;
+        height: 300px;
+        overflow: auto;
+        opacity: 1;
+    }
+    .head nav ul li {
+        color: rgba(0, 0, 0, 0.6);
+        padding: 15px 25px;
+        border-radius: 25px;
+        font-family: 'barlow';
+        transition: 0.5s;
+    }
+    .head nav ul li.active {
+        background: hsl(51, 100%, 49%);
+        color: var(--dark-blue);
+        text-transform: uppercase;
+        font-family: 'fraunces';
+    }
+    /********************   Cards-Section Start    ********************/
+    .card {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card.two {
+        flex-direction: column-reverse;
+    }
+    .card .imgBox {
+        width: 100%;
+        height: 50%;
+    }
+    .card .contentBox {
+        width: 100%;
+        height: 50%;
+        padding: 2em 0;
+        text-align: center;
+    }
+    .card.one .imgBox {
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/mobile/image-transform.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .card.two .imgBox {
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/mobile/image-stand-out.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .card .contentBox p {
+        font-family: 'barlow';
+        color: var(--rayish-blue);
+        line-height: 1.4em;
+        margin-left: 4em;
+        margin-right: 4em;
+        margin-bottom: 1em;
+    }
+    .card .contentBox button {
+        font-family: 'fraunces';
+        color: var(--very-dark-desaturated-blue);
+        padding: 5px;
+        font-size: 1em;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, white 50%, var(--yellow));
+        border: none;
+        border-radius: 5px;
+        margin-left: 0em;
+    }
+    /********************   Cards-Section End    ********************/
+}
+
+@media screen and (max-width:376px) {
+    .container {
+        width: 375px;
+    }
+    .head {
+        width: 100%;
+        height: 70vh;
+        background-image: url(./images/mobile/image-header.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .head nav {
+        position: relative;
+    }
+    .head nav .hamburger {
+        display: block;
+        background-image: url(./images/icon-hamburger.svg);
+        width: 24px;
+        height: 18px;
+    }
+    .head nav ul {
+        top: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        background: whitesmoke;
+        height: 300px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+    }
+    .head nav ul {
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .head nav ul.active {
+        width: 95%;
+        height: 300px;
+        overflow: visible;
+        opacity: 1;
+    }
+    .head nav ul.active::before{
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background: whitesmoke;
+        top: -29px;
+        right: 0;
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100% );
+        z-index: 3;
+    }
+    .head nav ul li {
+        color: rgba(0, 0, 0, 0.6);
+        padding: 15px 25px;
+        border-radius: 25px;
+        font-family: 'barlow';
+        transition: 0.5s;
+    }
+    .head nav ul li.active {
+        background: hsl(51, 100%, 49%);
+        color: var(--dark-blue);
+        text-transform: uppercase;
+        font-family: 'fraunces';
+    }
+    .head h1 {
+        font-family: 'fraunces';
+        text-transform: uppercase;
+        font-size: 2.5em;
+        margin: auto;
+        text-align: center;
+        margin-top: 2em;
+        color: white;
+        position: relative;
+    }
+    .head h1::before {
+        position: absolute;
+        content: url(./images/icon-arrow-down.svg);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+    }
+    /********************   Cards-Section Start    ********************/
+    .card {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .card.two {
+        flex-direction: column-reverse;
+    }
+    .card .imgBox {
+        width: 100%;
+        height: 50%;
+    }
+    .card .contentBox {
+        width: 100%;
+        height: 50%;
+        padding: 1em 0;
+        text-align: center;
+    }
+    .card.one .imgBox {
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/mobile/image-transform.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .card.two .imgBox {
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/mobile/image-stand-out.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .card .contentBox p {
+        font-family: 'barlow';
+        color: var(--rayish-blue);
+        line-height: 1.4em;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+    }
+    .card .contentBox button {
+        font-family: 'fraunces';
+        color: var(--very-dark-desaturated-blue);
+        padding: 5px;
+        font-size: 1em;
+        text-transform: uppercase;
+        background: linear-gradient(180deg, white 50%, var(--yellow));
+        border: none;
+        border-radius: 5px;
+        margin-left: 0em;
+    }
+    .card .contentBox h1 {
+        margin: 0 0 1em 0;
+    }
+    /********************   Cards-Section End    ********************/
+    .job-section {
+        display: flex;
+        flex-direction: column;
+        height: 1100px;
+    }
+    .job-section>* {
+        width: 100%;
+        height: 550px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        position: relative;
+    }
+    .job-section>*>h2 {
+        position: absolute;
+        bottom: 25%;
+        width: 100%;
+        font-family: 'fraunces';
+        text-align: center;
+    }
+    .job-section>*>p {
+        font-family: 'barlow';
+        /* margin: auto; */
+        width: 380px;
+        text-align: center;
+        margin-bottom: 10%;
+    }
+    .graphic-dsg {
+        background-image: url(./images/mobile/image-graphic-design.jpg);
+        height: 550px;
+        background-position: center;
+        background-size: cover;
+        color: var(--dark-desaturated-cyan);
+    }
+    .photography-dsg {
+        background-image: url(./images/mobile/image-photography.jpg);
+        height: 550px;
+        background-position: center;
+        background-size: cover;
+        color: var(--dark-blue);
+    }
+    /********************   Job-Section End    ********************/
+    /********************   Testinomials Start    ********************/
+    .testinomials {
+        width: 100%;
+        min-height: 150vh;
+        background-clip: content-box;
+        box-sizing: border-box;
+        padding: 3em 0em;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+    .testinomials h1 {
+        position: absolute;
+        font-size: 1em;
+        top: 5%;
+        left: 20%;
+        transform: translateX(0%);
+        font-family: 'fraunces';
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--dark-moderate-cyan);
+        letter-spacing: 2px;
+    }
+    .client {
+        width: 100%;
+        height: 33.3%;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0em 0em;
+    }
+    .client .pro-pic {
+        margin-top: 2em;
+        margin-bottom: 0em;
+    }
+    .client .pro-pic img {
+        width: 100px;
+        border-radius: 50%;
+    }
+    .client p {
+        font-family: 'barlow';
+        color: var(--very-dark-desaturated-blue);
+        margin-bottom: 1em;
+    }
+    .client h3 {
+        font-family: 'fraunces';
+        margin-bottom: 0.5em;
+    }
+    .client h4 {
+        font-family: 'barlow';
+        color: var(--dark-moderate-cyan);
+    }
+
+    /********************   Testinomials End    ********************/
+
+
+    /********************   Footer Start    ********************/
+    .footer .img-glry {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer .bottom-glry {
+        background: var(--dark-moderate-cyan);
+        height: 285px;
+    }
+    .img-glry img {
+        width: 50%;
+    }
+    .bottom-glry>* {
+        margin: auto;
+    }
+    .bottom-glry .logo {
+        padding-top: 90px;
+        background-image: url(./images/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 250px;
+        height: 6vh;
+    }
+    ul {
+        list-style: none;
+    }
+    ul.sec {
+        width: 300px;
+        display: flex;
+        justify-content: space-between;
+        font-family: 'barlow';
+    }
+    ul.links {
+        margin-top: 2em;
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+    }
+    /********************   Footer End    ********************/
+}

@@ -1,0 +1,328 @@
+@font-face {
+    font-family: 'barlow';
+    src: url(./fonts/Barlow-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'fraunces';
+    src: url(./fonts/Fraunces_9pt_SuperSoft-Bold.ttf);
+}
+
+:root{
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+
+    /* (graphic design text) */
+    --dark-desaturated-cyan : hsl(167, 40%, 24%);
+
+    /* (photography text) */
+    --dark-blue: hsl(198, 62%, 26%);
+
+    /* (footer) */
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
+
+
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --rayish-blue: hsl(210, 4%, 67%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    font-size: 18px;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 40px;
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#03e9f4);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,red);
+    border-radius: 6px;
+}
+/********************   Head Start    ********************/
+.head{
+    width: 100%;
+    height: 100vh;
+    background-image:url(./images/desktop/image-header.jpg);
+    background-size: contain;
+    background-position: center;
+}
+.head nav{
+    /* background: red; */
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 8vh;
+    box-sizing: border-box;
+    padding: 0 2vw;
+}
+.head nav .logo{
+    background-image: url(./images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 6vh;
+}
+.head nav .hamburger{
+    display: none;
+}
+.head nav ul{
+    display: flex;
+    list-style: none;
+    width: 600px;
+    /* background: #3dbeff; */
+    justify-content: space-around;
+}
+.head nav ul li{
+    color: white;
+    padding: 15px 25px;
+    border-radius: 25px;
+    font-family: 'barlow';
+    transition: 0.5s;
+}
+.head nav ul li.active{
+    background: white;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-family: 'fraunces';
+}
+.head nav ul li:hover{
+    cursor: pointer;
+    background: aquamarine;
+    color: rgb(110, 106, 114);
+}
+
+.head h1{
+    font-family: 'fraunces';
+    text-transform: uppercase;
+    font-size: 4em;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+    color: white;
+    position: relative;
+}
+.head h1::before{
+    position: absolute;
+    content: url(./images/icon-arrow-down.svg);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 120%;
+}
+/********************   Head End    ********************/
+
+/********************   Cards-Section Start    ********************/
+
+.card{
+    width: 100%;
+    height: 600px;
+    display: flex;
+}
+.card>*{
+    width: 100%;
+}
+.card.one .imgBox{
+    width: 100%;
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-size: cover;
+}
+.card.two .imgBox{
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    width: 100%;
+    background-size: cover;
+}
+.card .contentBox{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 8em 0;
+}
+.card .contentBox h1{
+    font-family: 'fraunces';
+    color: var(--very-dark-desaturated-blue);
+    margin-left: 4em;
+    margin-right: 6em;
+    margin-bottom: 1em;
+}
+.card .contentBox p{
+    font-family: 'barlow';
+    color: var(--rayish-blue);
+    margin-left: 8em;
+    margin-right: 9em;
+    margin-bottom: 1em;
+}
+.card .contentBox button{
+    font-family: 'fraunces';
+    color: var(--very-dark-desaturated-blue);
+    padding: 5px;
+    font-size: 1em;
+    text-transform: uppercase;
+    background: linear-gradient(180deg,white 50%,var(--yellow));
+    border: none;
+    border-radius: 5px;
+    margin-left: 8em;
+}
+.card.two{
+    flex-direction: row-reverse;
+}
+/********************   Cards-Section End    ********************/
+
+
+/********************   Job-Section Start    ********************/
+.job-section{
+    display: flex;
+    height: 550px;
+}
+.job-section>*{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+.job-section>*>h2{    
+    position: absolute;
+    bottom: 25%;
+    width: 100%;
+    font-family: 'fraunces';
+    text-align: center;
+}
+.job-section>*>p{
+    font-family: 'barlow';
+    /* margin: auto; */
+    width: 380px;
+    text-align: center;
+    margin-bottom: 5%;
+}    
+.graphic-dsg{
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    color: var(--dark-desaturated-cyan);
+}
+.photography-dsg{
+    background-image: url(./images/desktop/image-photography.jpg);
+    height: 550px;
+    background-position: center;
+    background-size: cover;
+    color: var(--dark-blue);
+}
+/********************   Job-Section End    ********************/
+
+
+/********************   Testinomials Start    ********************/
+.testinomials{
+    width: 100%;
+    height: 100vh;
+    background-clip: content-box;
+    box-sizing: border-box;
+    padding: 8em 8em;
+    display: flex;
+    align-items:flex-end;
+    position: relative;
+}
+.testinomials h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'fraunces';
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--dark-moderate-cyan);
+    letter-spacing: 2px;
+}
+.client{
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2em 1.5em;
+}
+.client .pro-pic{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.client .pro-pic img{
+    width: 100px;
+    border-radius: 50%;
+}
+.client p{
+    font-family: 'barlow';
+    color: var(--very-dark-desaturated-blue);
+    margin-bottom: 3em;
+}
+.client h3{   
+    font-family: 'fraunces';
+    margin-bottom: 0.5em;
+}
+.client h4{
+    font-family: 'barlow';
+    color: var(--dark-moderate-cyan);
+}
+/********************   Testinomials End    ********************/
+
+
+/********************   Footer Start    ********************/
+/* .head,.cards-section,.job-section,.testinomials{
+    display: none;
+} */
+.footer .img-glry{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .bottom-glry{
+    background: var(--dark-moderate-cyan);
+    height: 285px;
+}
+.img-glry img{
+    width: 25%;
+}
+.bottom-glry>*{
+    margin: auto;
+}
+.bottom-glry .logo{
+    padding-top: 90px;
+    background-image: url(./images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 6vh;
+}
+ul{
+    list-style: none;
+}
+ul.sec{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'barlow';
+}
+ul.links{
+    margin-top: 2em;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+/********************   Footer End    ********************/
