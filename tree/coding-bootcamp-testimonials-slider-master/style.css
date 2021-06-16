@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'inter-300';
+    src: url(./fonts/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: 'inter-500';
+    src: url(./fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'inter-700';
+    src: url(./fonts/Inter-Bold.ttf);
+}
+
+:root {
+    --dark-blue: hsl(240, 38%, 20%);
+    --grayish-blue: hsl(240, 18%, 77%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 32px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url(./images/pattern-bg.svg);
+    background-size: contain 60%;
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+}
+
+.container::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: url(./images/pattern-curve.svg);
+    background-repeat: no-repeat;
+}
+
+.container::after {
+    position: absolute;
+    content: url(./images/pattern-quotes.svg);
+    left: 25%;
+    top: 25%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 1200px;
+    height: 540px;
+    /* background: olive; */
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.box .contentBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(2em + calc(1200px - 540px));
+    height: 100%;
+    /* background: rgba(218, 112, 214, 0.466); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-left: 3em;
+}
+
+.contentBox .para {
+    font-family: 'inter-300';
+    color: var(--dark-blue);
+    padding-bottom: 1em;
+}
+
+.contentBox .name {
+    font-family: 'inter-700';
+    font-size: .5em;
+}
+
+.contentBox .job {
+    font-family: 'inter-500';
+    font-size: .5em;
+    color: var(--grayish-blue);
+}
+
+.box .imgBox {
+    background: palegoldenrod;
+    width: 540px;
+    height: 540px;
+    position: relative;
+    box-shadow: 20px 30px 40px rgba(0, 0, 0, .4);
+    border-radius: 5px;
+}
+
+.imgBox .btn-container {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    transform: translateY(50%);
+    width: 100px;
+    height: 50px;
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 0px 20px rgba(0, 0, 0, .2);
+}
+
+.btn-container button {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-container button:active {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4) inset;
+}
+
+
+
+@media screen and (max-width:380px) {
+    .body {
+        width: 100%;
+        height: 100%;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url(./images/pattern-bg.svg);
+        background-size: 80%;
+        background-position: top 10% center;
+        background-repeat: no-repeat;
+    }
+    .container::before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        background-image: url(./images/pattern-curve.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 100%;
+        height: 100px;
+    }
+    .container::after {
+        position: absolute;
+        content: url(./images/pattern-quotes.svg);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50%;
+        z-index: 0;
+    }
+
+
+
+    .box {
+        width: 100%;
+        height: 540px;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .box .contentBox {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        width: 100%;
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        box-sizing: border-box;
+        padding-left: 0em;
+    }
+    .contentBox .para {
+        text-align: center;
+        font-family: 'inter-300';
+        color: var(--dark-blue);
+        font-size: 0.6em;
+        padding: 0 1em;
+        padding-bottom: 0.5em;
+    }
+    .contentBox .name {
+        font-family: 'inter-700';
+        font-size: .5em;
+        display: block;
+        text-align: center;
+    }
+    .contentBox .job {
+        display: block;
+        text-align: center;
+        font-family: 'inter-500';
+        font-size: .5em;
+        color: var(--grayish-blue);
+        width: 200px;
+    }
+    .box .imgBox {
+        background: palegoldenrod;
+        width: calc(540px / 2);
+        height: calc(540px / 2);
+        position: relative;
+        box-shadow: 20px 30px 40px rgba(0, 0, 0, .4);
+        border-radius: 5px;
+        background-size: contain;
+    }
+    .imgBox .btn-container {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateY(50%) translateX(-50%);
+        width: 100px;
+        height: 50px;
+        background: white;
+        border-radius: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0 0px 20px rgba(0, 0, 0, .2);
+    }
+}
