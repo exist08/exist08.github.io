@@ -114,9 +114,9 @@
     /********************   Cards-Section End    ********************/
 }
 
-@media screen and (max-width:385px) {
+@media screen and (max-width:386px) {
     .container {
-        width: 375px;
+        width: 385px;
     }
     .head {
         width: 100%;
@@ -303,22 +303,21 @@
     /********************   Job-Section End    ********************/
     /********************   Testinomials Start    ********************/
     .testinomials {
-        width: 100%;
+        margin: auto;
+        width: 95%;
         min-height: 150vh;
         background-clip: content-box;
         box-sizing: border-box;
-        padding: 3em 0em;
+        padding: 1em 0em;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: center;
         position: relative;
     }
     .testinomials h1 {
-        position: absolute;
+        position: static;
         font-size: 1em;
-        top: 5%;
-        left: 20%;
-        transform: translateX(0%);
         font-family: 'fraunces';
         text-align: center;
         text-transform: uppercase;
