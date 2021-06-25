@@ -1,0 +1,201 @@
+:root {
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+@font-face {
+    font-family: 'brl-sm-cdsd-500';
+    src: url(./fonts/BarlowSemiCondensed-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'brl-sm-cdsd-600';
+    src: url(./fonts/BarlowSemiCondensed-SemiBold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-size: 13px;
+    background: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 2em 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.card .card-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .card-container .desc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card.violet {
+    background: var(--moderate-violet);
+}
+
+.card.dgray {
+    background: var(--very-dark-grayish-blue);
+}
+
+.card.dblack {
+    background: var(--very-dark-blackish-blue);
+}
+
+.card.clrd {
+    color: white;
+}
+
+.card p.medium {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.card.clrd p.medium {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+.card .intro .details h5 {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.card.clrd .intro .details h5 {
+    color: rgba(255, 255, 255, 0.50);
+}
+
+.card .intro .details {
+    font-family: 'brl-sm-cdsd-500';
+}
+
+.card .intro {
+    display: flex;
+    align-items: center;
+}
+
+.desc {
+    font-family: 'brl-sm-cdsd-500';
+}
+
+.desc p.bold {
+    font-family: 'brl-sm-cdsd-600';
+    font-size: 1.5em;
+}
+
+.desc p.medium {
+    font-size: 1.1em;
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 10em;
+}
+
+.card-five {
+    width: calc(calc(1100px * 25) / 100);
+    margin-left: 0em;
+    height: 100%;
+}
+
+.top-four {
+    width: calc(calc(1100px * 73) / 100);
+    display: grid;
+    gap: 20px;
+    grid-template-areas: "vl vl gb" "wt db db";
+}
+
+.top-four .card:nth-child(1) {
+    grid-area: vl;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 30% top;
+    background-size: 15%;
+}
+
+.card:nth-child(2) {
+    grid-area: gb;
+}
+
+.card:nth-child(3) {
+    grid-area: wt;
+}
+
+.card:nth-child(4) {
+    grid-area: db;
+}
+
+.card .intro .pro-pic {
+    background-image: url(./images/image-daniel.jpg);
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.card:nth-child(2) .intro .pro-pic {
+    background-image: url(./images/image-jonathan.jpg);
+}
+
+.card:nth-child(3) .intro .pro-pic {
+    background-image: url(./images/image-jeanette.jpg);
+}
+
+.card:nth-child(4) .intro .pro-pic {
+    background-image: url(./images/image-patrick.jpg);
+}
+
+.card-five .intro .pro-pic {
+    background-image: url(./images/image-kira.jpg);
+}
+
+@media screen and (max-width:1100px) {
+    .container {
+        width: 100%;
+        display: flex;
+        padding-top: 5em;
+    }
+    .card-five {
+        width: 100%;
+    }
+    .card-five .card {
+        margin: 0em 2em 2em 2em;
+    }
+    .top-four {
+        width: 100%;
+        margin: 2em;
+        display: grid;
+        gap: 20px;
+        grid-template-areas: "vl vl gb" "wt db db";
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .top-four{
+        display: flex;
+        flex-direction: column;
+    }
+}
