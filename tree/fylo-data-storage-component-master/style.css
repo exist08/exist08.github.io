@@ -237,5 +237,6 @@ main {
     }
     .container{
         background-image: url(./images/bg-mobile.png);
+        background-size: cover;
     }
 }
