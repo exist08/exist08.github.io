@@ -1,0 +1,241 @@
+:root {
+    --gradient: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    --pale-blue: hsl(243, 100%, 93%);
+    --grayish-blue: hsl(229, 7%, 55%);
+    --dark-blue: hsl(228, 56%, 26%);
+    --very-dark-blue: hsl(229, 57%, 11%);
+}
+
+@font-face {
+    font-family: 'raleway-700';
+    src: url(./fonts/Raleway-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'raleway-400';
+    src: url(./fonts/Raleway-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-size: 14px;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-image: url(./images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
+    background-color: var(--very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 900px;
+    height: 200px;
+    /* background: cyan; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.intro {
+    width: 350px;
+    height: 200px;
+    background: var(--dark-blue);
+    border-radius: 10px;
+    border-top-right-radius: 100px;
+    box-sizing: border-box;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.outro {
+    width: 500px;
+    height: 150px;
+    background: var(--dark-blue);
+    border-radius: 10px;
+}
+
+/* Intro ******/
+
+.intro .logo {
+    background-image: url(./images/logo.svg);
+    width: 135px;
+    height: 40px;
+}
+
+.menu button {
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    background: var(--very-dark-blue);
+    border-radius: 10px;
+    margin-right: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.menu .doc {
+    background-image: url(./images/icon-document.svg);
+}
+
+.menu .fld {
+    background-image: url(./images/icon-folder.svg);
+}
+
+.menu .upl {
+    background-image: url(./images/icon-upload.svg);
+}
+
+/* Outro *****/
+
+.outro {
+    box-sizing: border-box;
+    padding: 3em;
+    color: var(--pale-blue);
+}
+
+.outro-cont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.outro-cont .bold {
+    font-family: 'raleway-700';
+}
+
+.outro-cont h3 {
+    font-family: 'raleway-400';
+    font-weight: unset;
+    font-size: 1em;
+}
+
+.outro-cont .slider {
+    width: 100%;
+    height: 15px;
+    background: var(--very-dark-blue);
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 3px solid var(--very-dark-blue);
+    position: relative;
+}
+
+.slider .alert {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    right: 0;
+    transform: translateY(-125%);
+    position: absolute;
+    width: 170px;
+    height: 70px;
+    background: white;
+    color: var(--grayish-blue);
+    font-family: 'raleway-700';
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.alert .bold {
+    font-size: 3em;
+    color: black;
+    letter-spacing: 0px;
+}
+
+.alert::before {
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: white;
+    bottom: -30%;
+    right: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.outro-cont .slider .filled {
+    height: 15px;
+    width: 81%;
+    background: var(--gradient);
+    border-radius: 25px;
+    position: relative;
+}
+
+.outro-cont .slider .filled::before {
+    position: absolute;
+    content: '';
+    background: white;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    right: 0;
+    top: 50%;
+    transform: translate(-20%, -50%);
+}
+
+.checkpoint {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro, .outro {
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:850px) {
+    main {
+        width: 100%;
+        height: 400px;
+        /* background: cyan; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .intro {
+        width: 350px;
+    }
+    .outro {
+        width: 500px;
+    }
+    .slider .alert {
+        left: 50%;
+        transform: translateY(100%) translateX(-50%);
+        position: absolute;
+        width: 170px;
+        height: 70px;
+    }
+    .alert::before {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .outro {
+        width: 350px;
+    }
+    .container{
+        background-image: url(./images/bg-mobile.png);
+    }
+}
