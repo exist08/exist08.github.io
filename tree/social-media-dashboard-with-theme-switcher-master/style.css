@@ -1,0 +1,351 @@
+:root {
+    --toggle: hsl(230, 22%, 74%);
+    --linear-gradient: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --fb: hsl(208, 92%, 53%);
+    --tt: hsl(203, 89%, 53%);
+    --ig: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    --yt: hsl(348, 97%, 39%);
+    --lime-green: hsl(163, 72%, 41%);
+    --bright-red: hsl(356, 69%, 56%);
+
+    --very-dark-txt: hsl(230, 17%, 14%);
+    --dark-txt: hsl(228, 12%, 44%);
+    --card-bg: hsl(227, 47%, 96%);
+    --top-bg-pttrn: hsl(225, 100%, 98%);
+    --bg: #fff;
+}
+
+.dark {
+    --very-dark-txt: #fff;
+    --dark-txt: hsl(228, 34%, 66%);
+    --card-bg: hsl(228, 28%, 20%);
+    --top-bg-pttrn: hsl(232, 19%, 15%);
+    --bg: hsl(230, 17%, 14%);
+}
+
+@font-face {
+    font-family: 'inter-reg';
+    src: url(./fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'inter-bold';
+    src: url(./fonts/Inter-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-size: 14px;
+    background: var(--bg);
+    transition: background 1s, color 1s;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 4em 0;
+    position: relative;
+}
+
+.container::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 250px;
+    background: var(--top-bg-pttrn);
+    transform: translateY(-4em);
+    z-index: -1;
+}
+
+main {
+    width: 1150px;
+}
+
+/********** Nav *******************************/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .header h1 {
+    font-family: 'inter-bold';
+    font-size: 2em;
+    color: var(--very-dark-txt);
+}
+
+nav .header h2 {
+    padding-top: .3em;
+    font-family: 'inter-reg';
+    font-size: 1em;
+    color: var(--dark-txt);
+}
+
+.theme-swch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'inter-bold';
+    color: var(--dark-txt);
+}
+
+.theme-swch>* {
+    padding-left: 0.5em;
+}
+
+#check-box {
+    display: none;
+}
+
+.switch-btn {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: var(--toggle);
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset;
+    cursor: pointer;
+}
+
+.switch-btn::before {
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    transition: 0.5s;
+}
+
+#check-box:checked+.switch-btn {
+    background: var(--linear-gradient);
+    transition: 0.5s;
+}
+
+#check-box:checked+.switch-btn::before {
+    left: 32px;
+}
+
+/********* Section Top  ***********************/
+
+.section-top {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards {
+    width: 250px;
+    height: 200px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5px;
+    border-top: 5px solid;
+    position: relative;
+    margin-bottom: 2em;
+    transition: 0.5s;
+}
+
+.cards:nth-child(1) {
+    border-top-color: var(--fb);
+}
+
+.cards:nth-child(2) {
+    border-top-color: var(--tt);
+}
+
+.cards:nth-child(3) {
+    border: none;
+    overflow: hidden;
+}
+
+.cards:nth-child(3)::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--ig);
+}
+
+.cards:nth-child(4) {
+    border-top-color: var(--yt);
+}
+
+.cards .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .uname {
+    font-family: 'inter-bold';
+    color: var(--dark-txt);
+    font-size: 1em;
+    padding-left: .5em;
+}
+
+.cards .mid {
+    text-align: center;
+}
+
+.cards .mid h1 {
+    font-family: 'inter-bold';
+    font-size: 3.5em;
+    color: var(--very-dark-txt);
+}
+
+.cards .mid h4 {
+    font-family: 'inter-reg';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--dark-txt);
+}
+
+.cards .bottom {
+    font-family: 'inter-bold';
+    color: var(--lime-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .bottom>* {
+    padding-left: 0.3em;
+}
+
+.cards:nth-child(4) .bottom {
+    color: var(--bright-red);
+}
+
+/*********** OverView *****************/
+
+.ovrvw {
+    margin-top: 0.5em;
+    font-family: 'inter-bold';
+    color: var(--dark-txt);
+}
+
+/*********** Section Bottom ******************/
+
+.section-bottom {
+    margin-top: 1.5em;
+    /* background: violet; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bcards {
+    width: 250px;
+    height: 150px;
+    background: var(--card-bg);
+    border-radius: 5px;
+    margin-bottom: 2em;
+    box-sizing: border-box;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.7s;
+}
+
+.bcards>* {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bcards h5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcards h1 {
+    font-family: 'inter-bold';
+    font-size: 3em;
+    color: var(--very-dark-txt);
+}
+
+.bcards h4 {
+    font-family: 'inter-bold';
+    color: var(--dark-txt);
+}
+
+.bcards h5 {
+    font-family: 'inter-bold';
+    color: var(--lime-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcards h5>* {
+    padding-left: 0.3em;
+}
+
+.bcards:nth-child(2) h5, .bcards:nth-child(7) h5, .bcards:nth-child(8) h5 {
+    color: var(--bright-red);
+}
+
+@media screen and (max-width:540px) {
+    main {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 2em;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav .header h1 {
+        font-family: 'inter-bold';
+        font-size: 1.8em;
+        color: var(--very-dark-txt);
+    }
+    nav .header h2 {
+        font-family: 'inter-reg';
+        font-size: 1em;
+        color: var(--dark-txt);
+        padding-bottom: 1em;
+    }
+    .theme-swch {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'inter-bold';
+        color: var(--dark-txt);
+        width: 100%;
+        padding-top: 1em;
+        border-top: 2px solid var(--dark-txt);
+    }
+    .theme-swch>* {
+        padding-left: 0em;
+    }
+
+    .section-top{
+        width: 100%;
+    }
+    .cards,.bcards{
+        width: 100%;
+    }
+}
