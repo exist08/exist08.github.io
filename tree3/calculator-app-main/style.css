@@ -1,0 +1,352 @@
+:root {
+    --main-bg: hsl(222, 26%, 31%);
+    --keypad-bg-toggle: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --key-bg-del-reset: hsl(225, 21%, 49%);
+    --key-del-reset-shadow: hsl(224, 28%, 35%);
+    --key-bg-eq: hsl(6, 63%, 50%);
+    --key-eq-shadow: hsl(6, 70%, 34%);
+    --key-color-main: hsl(221, 14%, 31%);
+    --key-color: hsl(30, 25%, 89%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --rst-del-color: #fff;
+    --screen-txt: var(--rst-del-color);
+    --eq-color: var(--rst-del-color);
+}
+
+.light {
+    --main-bg: hsl(0, 0%, 90%);
+    --keypad-bg-toggle: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --key-bg-del-reset: hsl(185, 42%, 37%);
+    --key-del-reset-shadow: hsl(185, 58%, 25%);
+    --key-bg-eq: hsl(25, 98%, 40%);
+    --key-eq-shadow: hsl(25, 99%, 27%);
+    --key-color-main: hsl(60, 10%, 19%);
+    --key-color: hsl(45, 7%, 89%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --rst-del-color: #fff;
+    --screen-txt: var(--key-color-main);
+    --eq-color: var(--rst-del-color);
+}
+
+.dark {
+    --main-bg: hsl(268, 75%, 9%);
+    --keypad-bg-toggle: hsl(268, 71%, 12%);
+    --screen-bg: var(--keypad-bg-toggle);
+    --key-bg-del-reset: hsl(281, 89%, 26%);
+    --key-del-reset-shadow: hsl(285, 91%, 52%);
+    --key-bg-eq: hsl(176, 100%, 44%);
+    --key-eq-shadow: hsl(177, 92%, 70%);
+    --key-color-main: hsl(52, 100%, 62%);
+    --key-color: hsl(268, 47%, 21%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --rst-del-color: #fff;
+    --screen-txt: var(--key-color-main);
+    --eq-color: var(--main-bg);
+}
+
+@font-face {
+    font-family: 'spartan-bold';
+    src: url(./fonts/Spartan-Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'osans';
+    font-size: 32px;
+    font-family: 'spartan-bold';
+}
+
+body>* {
+    transition: color 0.5s, background 1.0s ease;
+}
+
+.container {
+    width: 100%;
+    /* height: 100%; */
+    background: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+main {
+    width: 540px;
+    height: 720px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+main>* {
+    border-radius: 10px;
+}
+
+main nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+main nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--screen-txt);
+    -webkit-box-reflect: below -60px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+main nav .theme-switcher {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 180px;
+}
+
+main nav .theme-switcher .i23 {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    font-size: .5em;
+    letter-spacing: 10px;
+    color: var(--screen-txt);
+}
+
+main nav .theme-switcher .txt {
+    font-size: .5em;
+    position: relative;
+    top: -10px;
+    color: var(--screen-txt);
+}
+
+#slider {
+    appearance: none;
+    border-radius: 20px;
+    height: 25px;
+    width: 90px;
+    outline: none;
+    cursor: pointer;
+    background: var(--keypad-bg-toggle);
+    padding: 0 2px;
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    background: var(--key-bg-eq);
+    border-radius: 50%;
+    position: relative;
+}
+
+main .screen {
+    width: 100%;
+    height: 130px;
+    background: var(--screen-bg);
+    overflow: hidden;
+}
+
+main .screen input {
+    border: none;
+    outline: none;
+    color: var(--screen-txt);
+    font-family: 'spartan-bold';
+    font-size: 1.5em;
+    text-align: right;
+    padding: 1em .5em;
+    box-sizing: border-box;
+}
+
+main .screen input::placeholder {
+    -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+}
+
+main .keypad {
+    width: 100%;
+    height: 480px;
+    background: var(--keypad-bg-toggle);
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+table tbody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.keypad button {
+    width: 100px;
+    height: 60px;
+    font-family: 'spartan-bold';
+    font-size: 1em;
+    line-height: 60px;
+    border: none;
+    outline: none;
+    color: var(--key-color-main);
+    background: var(--key-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 0 var(--key-shadow);
+    transition: 0.3s;
+    -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+}
+
+.keypad button:active {
+    transform: scale(0.8);
+}
+
+.bottom-btns {
+    width: 100%;
+}
+
+button.rst {
+    background: var(--key-bg-del-reset);
+    box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+    width: 225px;
+    color: var(--rst-del-color);
+    font-size: .7em;
+}
+
+button.eq {
+    background: var(--key-bg-eq);
+    box-shadow: 0 5px 0 var(--key-eq-shadow);
+    width: 225px;
+    color: var(--eq-color);
+}
+
+button.del {
+    background: var(--key-bg-del-reset);
+    box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+    color: var(--rst-del-color);
+    font-size: .7em;
+}
+
+@media screen and (max-width:576px) {
+    .container {
+        width: 100%;
+        /* height: 100%; */
+        background: var(--main-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 0em;
+    }
+    
+    main {
+        width: 95%;
+        height: 720px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    main .screen {
+        width: 100%;
+        height: 130px;
+        background: var(--screen-bg);
+        overflow: hidden;
+    }
+    main .screen input {
+        border: none;
+        outline: none;
+        color: var(--screen-txt);
+        font-family: 'spartan-bold';
+        font-size: 1.5em;
+        text-align: right;
+        padding: 1em .5em;
+        box-sizing: border-box;
+    }
+    main .screen input::placeholder {
+        -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    }
+    main .keypad {
+        width: 100%;
+        height: 480px;
+        background: var(--keypad-bg-toggle);
+        padding: .4em;
+        box-sizing: border-box;
+    }
+    table {
+        width: 100%;
+        height: 100%;
+    }
+    table tbody {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    tr {
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .keypad button {
+        width: 60px;
+        height: 60px;
+        font-family: 'spartan-bold';
+        font-size: 1em;
+        line-height: 60px;
+        border: none;
+        outline: none;
+        color: var(--key-color-main);
+        background: var(--key-color);
+        border-radius: 10px;
+        box-shadow: 0 5px 0 var(--key-shadow);
+        transition: 0.3s;
+        -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
+    }
+    .keypad button:active {
+        transform: scale(0.8);
+    }
+    .bottom-btns {
+        width: 100%;
+    }
+    button.rst {
+        background: var(--key-bg-del-reset);
+        box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+        width: 150px;
+        color: var(--rst-del-color);
+        font-size: .7em;
+    }
+    button.eq {
+        background: var(--key-bg-eq);
+        box-shadow: 0 5px 0 var(--key-eq-shadow);
+        width: 150px;
+        color: var(--eq-color);
+    }
+    button.del {
+        background: var(--key-bg-del-reset);
+        box-shadow: 0 5px 0 var(--key-del-reset-shadow);
+        color: var(--rst-del-color);
+        font-size: .7em;
+    }
+}
