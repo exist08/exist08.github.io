@@ -25,7 +25,7 @@ function del(){
 
 const body=document.body
 const slider=document.getElementById('slider')
-slider.onclick = ()=>{
+slider.onchange = ()=>{
     if(slider.value==50){
         func1()
     }
