@@ -213,6 +213,7 @@ tr {
     border-radius: 10px;
     box-shadow: 0 5px 0 var(--key-shadow);
     transition: 0.3s;
+    cursor:pointer;
     -webkit-box-reflect: below 1px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));
 }
 
