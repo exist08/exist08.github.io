@@ -403,9 +403,6 @@ footer .logo {
   body {
     font-size: 12px;
   }
-  .container {
-    background: red;
-  }
   main {
     padding: 80px 0;
     text-align: center;
@@ -505,9 +502,7 @@ footer .logo {
   }
 }
 @media screen and (max-width: 700px) {
-  .container {
-    background: cornflowerblue;
-  }
+
   nav {
     padding: 0 1em;
   }
