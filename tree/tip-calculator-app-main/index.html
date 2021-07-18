@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- displays site properly based on user's device -->
+
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+	<title>Frontend Mentor | Tip calculator app</title>
+
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="logo"></div>
+
+		<main>
+			<div class="left">
+				<div class="top">
+					<span class="lgt">Bill</span>
+					<input type="text" id="bill" placeholder="0">
+				</div>
+
+				<div class="mid">
+					<span class="lgt">Select Tip %</span>
+					<div class="btn-cont">
+						<button onclick="pass(5)">5%</button>
+						<button onclick="pass(10)">10%</button>
+						<button onclick="pass(15)">15%</button>
+						<button onclick="pass(25)">25%</button>
+						<button onclick="pass(50)">50%</button>
+						<input type="text" id="custom" placeholder="Custom" onkeyup="pass(this.value)">
+					</div>
+				</div>
+				<div class="bottom">
+					<span class="lgt">Number of People</span>
+					<input type="text" id="peoples" placeholder="0">
+				</div>
+			</div><!--Left End-->
+
+			<div class="right">
+				<div class="ta">
+					<div class="ta-l">
+						<span class="wht">Tip Amount</span>
+						<span class="lgt">/ person</span>
+					</div>
+					<span class="cost" id="tip_amount">0.00</span>
+				</div>
+
+				<div class="ttl">
+					<div class="ttl-l">
+						<span class="wht">Total</span>
+						<span class="lgt">/ person</span>
+					</div>
+					<span class="cost" id="total_amount">0.00</span>
+				</div>
+
+				<button id="reset">RESET</button>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>
