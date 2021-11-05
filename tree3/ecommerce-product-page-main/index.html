@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Anurag Singh | E-commerce product page</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="hamburger">
+        <img src="./images/icon-menu.svg" alt="">
+      </div>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="">
+      </div>
+      <ul>
+        <img src="./images/icon-close.svg" class="close-icon" alt="">
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div class="cart-prof">
+        <div class="cart">
+          <div class="cart-icon" id="carticon">
+            <img src="./images/icon-cart2.svg" alt="">
+          </div>
+          <span class="cart-count" id="cartcount"></span>
+          <div class="cart-details not-active" id="cartdetails">
+            <h3>Cart</h3>
+            <div class="cart-summary" id="cartsummary">
+              
+            </div>
+          </div>
+        </div>
+        <div class="propic">
+          <img src="./images/image-avatar.png" alt="">
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="showCase">
+        <img src="" alt="product-img" id="currentImg">
+        <div class="img-gallery">
+          <div class="product-1 images"></div>
+          <div class="product-2 images"></div>
+          <div class="product-3 images"></div>
+          <div class="product-4 images"></div>
+        </div>
+        <div class="mobile-slider">
+          <button id="left"><img src="./images/icon-previous.svg" alt=""></button>
+          <img src="" alt="product-img" id="mobileImg">
+          <button id="right"><img src="./images/icon-next.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="contentCase">
+        <span class="red-text">Sneaker Company</span>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+        <span class="price">
+          $125.00
+        </span>
+        <span class="dc">
+          50%
+        </span>
+        <s class="actual-price">
+          $250.00
+        </s>
+        <div class="shop-option">
+          <div class="counter">
+            <button id="dec">-</button>
+            <span id="count">0</span>
+            <button id="inc">+</button>
+          </div>
+          <button class="a2c" id="addtocart">
+            Add to cart
+          </button>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+<!-- site made by Anurag Singh (github/exist08) -->
+</html>
