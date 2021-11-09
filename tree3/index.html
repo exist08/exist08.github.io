@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker | Anurag Singh</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>IP Address Tracker</h1>
+      <form class="search-box" id="form">
+        <input type="text" placeholder="Search for any IP address or domain" id="search">
+        <button>></button>
+      </form>
+      <section>
+        <p>
+          <span class="head">IP Address</span>
+          <span class="content" id="ip-addr"></span>
+        </p>
+        <p>
+          <span class="head">Location</span>
+          <span class="content" id="location"></span>
+        </p>
+        <p>
+          <span class="head">Timezone</span>
+          <span class="content">UTC <span id="time-zone"></span></span>
+        </p>
+        <p>
+          <span class="head">ISP</span>
+          <span class="content" id="isp"></span>
+        </p>
+      </section>
+    </header>
+    <div id="map">
+      <!-- Map Here -->
+    </div>
+  </main>
+</body>
+</html>
