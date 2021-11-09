@@ -9,7 +9,7 @@ const locationElement=document.getElementById('location')              // Locati
 const timeZone=document.getElementById('time-zone')             // TimeZone
 const isp=document.getElementById('isp')                // ISP
 
-var key = config.API_KEY;   
+//var key = config.API_KEY;   
 
 let searchValue
 
