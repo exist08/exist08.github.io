@@ -22,7 +22,7 @@ form.addEventListener('submit',(e)=>{
     search.value=''
     
     const getData = async ()=>{
-        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${key}&ipAddress=${searchValue}`)
+        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_OXawFuSmz7I0uzo7ODRTp86jkBWvl&ipAddress=${searchValue}`)
         const details = await response.json()
         console.log(details)
         
