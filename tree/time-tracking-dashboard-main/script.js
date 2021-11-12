@@ -27,7 +27,7 @@ const getData = async (showby) =>{
             ${data.timeframes.daily.current}hrs
             </p>
             <p class="last-work-time">
-            Last Week - ${data.timeframes.daily.previous}hrs
+            Yesterday - ${data.timeframes.daily.previous}hrs
             </p>
             </div>
             </div>`
@@ -46,7 +46,7 @@ const getData = async (showby) =>{
             ${data.timeframes.monthly.current}hrs
             </p>
             <p class="last-work-time">
-            Last Week - ${data.timeframes.monthly.previous}hrs
+            Last Month - ${data.timeframes.monthly.previous}hrs
             </p>
             </div>
             </div>`
