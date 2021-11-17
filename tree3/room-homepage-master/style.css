@@ -122,8 +122,7 @@ p {
   }
   .primary {
     width: 100%;
-    height: unset;
-    aspect-ratio: 1/0.85;
+    height: calc(100vw * 0.85);
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
