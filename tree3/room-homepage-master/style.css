@@ -1,0 +1,340 @@
+:root {
+  --dark-gray: hsl(0, 0%, 63%);
+  --very-dark-gray: hsl(0, 0%, 27%);
+}
+@font-face {
+  font-family: 'spartan';
+  src: url(fonts/Spartan-Medium.ttf);
+}
+@font-face {
+  font-family: 'spartan-sb';
+  src: url(fonts/Spartan-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'spartan-bd';
+  src: url(fonts/Spartan-Bold.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 12px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'spartan';
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+p {
+  color: var(--dark-gray);
+  line-height: 1.5rem;
+}
+/****** primary or slideshow with nav *********/
+.primary {
+  width: 55%;
+  height: 70vh;
+  background-size: cover;
+  position: relative;
+}
+.primary #hamburger {
+  display: none;
+}
+.primary nav {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+}
+.primary nav .logo {
+  width: 62px;
+  height: 14px;
+  background-image: url(images/logo.svg);
+  margin: 4rem;
+}
+.primary nav ul {
+  display: flex;
+  list-style: none;
+}
+.primary nav ul li {
+  margin-right: 2rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+.primary nav ul li::before {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -5px;
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: white;
+  transition: 0.5s;
+}
+.primary nav ul li:hover:before {
+  width: 100%;
+}
+.primary .sliders {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(100%);
+  width: 150px;
+  height: 75px;
+  display: flex;
+}
+.primary .sliders button {
+  width: 50%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.primary .sliders button:nth-child(1) {
+  background-image: url(images/icon-angle-left.svg);
+}
+.primary .sliders button:nth-child(2) {
+  background-image: url(images/icon-angle-right.svg);
+}
+.primary .sliders button:hover {
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.5) inset;
+}
+.primary .sliders button:active {
+  transform: scale(0.7);
+}
+@media screen and (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+  .primary {
+    width: 100%;
+    height: unset;
+    aspect-ratio: 1/0.85;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .primary nav {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+  }
+  .primary nav .logo {
+    width: 62px;
+    height: 14px;
+    background-image: url(images/logo.svg);
+    margin: 4rem;
+  }
+  .primary nav ul {
+    display: flex;
+    list-style: none;
+  }
+  .primary nav ul li {
+    margin-right: 2rem;
+    color: white;
+  }
+  .primary .sliders {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(0);
+    width: 150px;
+    height: 75px;
+    display: flex;
+  }
+  .primary .sliders button {
+    width: 50%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 450px) {
+  .primary {
+    position: relative;
+  }
+  .primary nav {
+    width: 100%;
+    padding: 0 2rem;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .primary nav .logo {
+    background-repeat: no-repeat;
+    width: 50%;
+    text-align: left;
+  }
+  .primary #hamburger {
+    width: 40%;
+    display: block;
+    color: #b9b8b8;
+    font-size: 2rem;
+    margin-right: auto;
+    z-index: 10;
+    transition: 0.5s;
+  }
+  .primary ul#menu {
+    transform: translateX(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    width: 100%;
+    height: 15vh;
+    background: white;
+    transition: 0.5s;
+  }
+  .primary ul#menu li {
+    margin: 0 2rem;
+    color: black;
+    font-family: 'spartan-bd';
+  }
+  .primary ul#menu.active {
+    transform: translateX(0);
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+  }
+}
+/****** intro *******/
+.intro {
+  width: 45%;
+  height: 70vh;
+  padding: 8vw 9vw ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.intro h1 {
+  font-size: 2.5vw;
+  line-height: 3rem;
+}
+.intro p {
+  line-height: 1.5rem;
+}
+.intro button {
+  min-width: 43%;
+  height: 70px;
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  transition: 0.3s;
+  font-family: 'spartan-sb';
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  cursor: pointer;
+}
+.intro button:hover {
+  opacity: 0.5;
+  font-family: 'spartan-bd';
+}
+@media screen and (max-width: 900px) {
+  .intro {
+    width: 100%;
+    height: unset;
+    padding: 8vw 9vw ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .intro h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+  .intro p {
+    line-height: 1.5rem;
+    margin-bottom: 1em;
+  }
+  .intro button {
+    min-width: 43%;
+    height: 70px;
+    border: none;
+    outline: none;
+    background: none;
+    color: black;
+    transition: 0.3s;
+    font-family: 'spartan-sb';
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
+}
+/***** footer ***********/
+footer {
+  height: 30vh;
+  width: 100%;
+  display: flex;
+}
+footer .img {
+  width: 30%;
+  background-image: url(images/image-about-dark.jpg);
+  background-position: center;
+}
+footer .outro {
+  padding: 2vw 4vw;
+  width: 50%;
+}
+footer .outro h3 {
+  text-transform: uppercase;
+  font-family: 'spartan-sb';
+  letter-spacing: 4px;
+  margin: 1rem 0;
+}
+footer .img-2 {
+  background-image: url(images/image-about-light.jpg);
+}
+@media screen and (max-width: 900px) {
+  main {
+    height: unset;
+  }
+  footer {
+    height: unset;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  footer .img {
+    min-width: 100%;
+    height: 40vh;
+    background-image: url(images/image-about-dark.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer .outro {
+    padding: 4vw 4vw;
+    min-width: 100%;
+  }
+  footer .outro h3 {
+    text-transform: uppercase;
+    font-family: 'spartan-sb';
+    letter-spacing: 4px;
+    margin: 1rem 0;
+  }
+  footer .img-2 {
+    background-image: url(images/image-about-light.jpg);
+  }
+}
