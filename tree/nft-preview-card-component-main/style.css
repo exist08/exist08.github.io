@@ -1,0 +1,128 @@
+@font-face {
+  font-family: 'Outfit';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/outfit/v2/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4E.ttf) format('truetype');
+}
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cyan);
+  font-family: 'Outfit', sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  background: var(--very-dark-blue-main-BG);
+  display: grid;
+  place-items: center;
+}
+.card {
+  width: 350px;
+  height: 80vh;
+  background: var(--very-dark-blue-card-BG);
+  border-radius: 20px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 20px 100px rgba(0, 0, 0, 0.5);
+}
+.card .imgBox {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-image: url(images/image-equilibrium.jpg);
+  background-size: cover;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card .imgBox:hover::before {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background: var(--cyan);
+  opacity: 0.6;
+}
+.card .imgBox:hover::after {
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.card h2 {
+  letter-spacing: 1px;
+}
+.card p {
+  color: var(--soft-blue);
+  font-size: 1.23rem;
+  font-weight: 100;
+}
+.price-n-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+.price-n-time .eth {
+  color: var(--cyan);
+  font-weight: 700;
+}
+.price-n-time .eth img {
+  margin-right: 5px;
+}
+.price-n-time .time img {
+  margin-right: 5px;
+}
+.price-n-time span {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--soft-blue);
+}
+footer {
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer img {
+  height: 100%;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+footer .bw {
+  color: var(--soft-blue);
+  margin: 4px;
+}
+footer .cyan {
+  color: var(--cyan);
+}
