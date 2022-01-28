@@ -11,6 +11,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     width: 100%;
@@ -29,39 +30,25 @@ body{
     overflow: hidden;
     display: flex;
 }
-.container .intro{
-    width: 600px;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 4em 8em 4em 4em;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+.container .intro-container{
+    width: 100%;
+    padding: 4em 14em 4em 6em;
 }
 .container .img-sec{
-    width: 600px;
-    height: 100%;
-    position: relative;
-}
-.container .img-sec::before{
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 100%;
-    /* background: hsl(244, 38%, 16%); */
-    /* background:hsl(277, 51%, 26%); */
-    background:hsl(290, 100%, 43%);
-    opacity: 0.4;
-    z-index: 1;
+    background-image: url(./images/image-header-desktop.jpg);
+    background-size: cover;
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: multiply;
 }
-.container .img-sec img{
+.container .intro {
     height: 100%;
-    width: auto;
-    filter: hue-rotate(260deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
 .container .intro .heading{
-    width: 100%;
     color: hsl(0, 0%, 100%);
     font-size: 2.5em;
     font-weight: 800;
@@ -71,20 +58,16 @@ body{
     color: hsl(277, 64%, 61%);
 }
 .container .intro .para{
-    width: 100%;
     color: hsla(0, 0%, 100%, 0.6);
     font-size: 1em;
     font-weight: 400;
     font-family: 'inter';
-    box-sizing: border-box;
-    padding: 0 1em 2em 0;
+    line-height: 1.5rem;
 }
 .container .intro .counter-section{
     width: 100%;
     display: flex;
     justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0 4em 0 0;
 }
 .container .intro .counter-section .counters{
     color: hsla(0, 0%, 100%, 0.6);
@@ -93,7 +76,6 @@ body{
     text-transform: uppercase;
     font-weight: 400;
     font-family: 'lexend';
-    /* letter-spacing: 1px; */
 }
 .container .intro .counter-section .counters .count{
     font-size: 1.5em;
@@ -103,3 +85,28 @@ body{
     font-family: 'inter';
 }
 
+@media  screen and (max-width:900px) {
+    body{
+        font-size: 14px;
+        padding: 2em;
+    }
+    .container{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container .intro-container{
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+    }
+    .container .img-sec{
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/image-header-desktop.jpg);
+        background-size: cover;
+        background-color: hsl(277, 64%, 61%);
+        background-blend-mode: multiply;
+    }
+}
