@@ -1,0 +1,103 @@
+:root{
+    --light-green:#cee3e9;
+    --neon-green:hsl(150, 100%, 66%);
+    --gray-blue:hsl(217, 19%, 38%);
+    --dark-gray-blue:hsl(217, 19%, 24%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--dark-gray-blue);
+    font-size: 14px;
+    font-family: 'Manrope';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    width: 544px;
+    height: 336px;
+    background: var(--gray-blue);
+    box-shadow: 0 0 25px rgba(0,0,0,0.2),
+                0 0 100px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    padding: 3em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+section .neon-green{
+    color: var(--neon-green);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+section p{
+    font-size: 2em;
+    color: var(--light-green);
+    text-align: center;
+    line-height: 1.25em;
+    position: relative;
+}
+section p::before{
+    position: absolute;
+    content: '\201C';
+    transform: translateX(-13px);
+}
+section p::after{
+    position: absolute;
+    content: '\201D';
+}
+section .divider{
+    width: 100%;
+    height: 20px;
+    background-image: url(./images/pattern-divider-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+@media screen and (max-width:600px){
+    body{
+        padding: 1rem;
+    }
+    section{
+        width: 100%;
+    }
+    section .divider{
+        background-image: url(./images/pattern-divider-mobile.svg);
+    }
+}
+
+section{
+    position:relative;
+    button{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        position: absolute;
+        background-image: url(./images/icon-dice.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: var(--neon-green);
+        box-shadow: 0 0 25px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: .5s;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,50%) scale(1) rotate(0deg) ;
+        transform-origin: center center;
+    }
+    button:active{
+        transform: translate(-50%,50%) scale(1.5) rotate(360deg);
+        transform-origin: center center;
+        box-shadow: 0 0 15px var(--neon-green),
+        0 0 35px var(--neon-green);
+    }
+}
