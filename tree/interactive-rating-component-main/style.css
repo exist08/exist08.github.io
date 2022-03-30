@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(216, 12%, 8%);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+}
+.container-1{
+    width: 400px;
+    height: 400px;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 30px;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+ul li button{
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    transition: .5s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+ul li button:hover{
+    background-color: hsl(217, 12%, 63%);
+    color: aliceblue;
+}
+ul li button:focus{
+    background-color: hsl(25, 97%, 53%);
+    color: aliceblue;
+}
+
+p{
+    color: gray;
+}
+.container-1>button{
+    width: 100%;
+    background: hsl(25, 97%, 53%);
+    color: white;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    transition: .5s;
+    cursor: pointer;
+    line-height: 100%;
+}
+button:hover{
+    color: hsl(25, 97%, 53%);
+    background: aliceblue;
+}
+
+.star{
+    width: 50px;
+    height: 50px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 50%;
+    background-image: url(./images/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* container 2 code */
+.container-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-2 .imgBox{
+    width: 150px;
+    height: 150px;
+    background-image: url(./images/illustration-thank-you.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.container-2 p{
+    text-align: center;
+}
+
+.container-2 p.org-p{
+    color: hsl(25, 97%, 53%);
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.container-2{
+    display: none;
+}
