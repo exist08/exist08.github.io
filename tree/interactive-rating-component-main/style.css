@@ -14,6 +14,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Overpass', sans-serif;
+    padding: 1em;
 }
 .container-1{
     width: 400px;
