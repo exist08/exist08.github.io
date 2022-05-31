@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="icofont/icofont.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ReCreate</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <!-- left panel or nav -->
+      <nav>
+        <div class="nav-container">
+          <div class="user-dtls">
+            <div class="avatar-box"></div>
+            <span>Hello</span>
+            <h3>Anurag Singh</h3>
+          </div>
+          <ul>
+            <h4>Menu</h4>
+            <li><i class="icofont-ui-home"></i>Home</li>
+            <li><i class="icofont-music-disk"></i>Albums</li>
+            <li><i class="icofont-user-alt-2"></i>Artists</li>
+            <li><i class="icofont-radio-mic"></i>Podcasts</li>
+          </ul>
+          <ul>
+            <h4>My Library</h4>
+            <li><i class="icofont-music-notes"></i>Recently Played</li>
+            <li><i class="icofont-ui-love"></i>Liked Songs</li>
+            <li><i class="icofont-ui-love-add"></i>Create Playlist</li>
+            <li>----------------------------------</li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- mid panel or news feed -->
+      <section class="feed">
+        <div class="top-search">
+          <button><i class="icofont-rounded-left"></i></button>
+          <button><i class="icofont-rounded-right"></i></button>
+          <div class="search-box">
+            <i class="icofont-search"></i>
+            <input type="text" placeholder="Search any song here" />
+          </div>
+        </div>
+        <div class="hero">
+          <div class="hero-cont">
+            <span>Playlist</span>
+            <h1>Your Liked Songs</h1>
+            <p>
+              <i class="icofont-music music"></i> 24 songs
+              <i class="icofont-ui-press dot"></i>
+              <i class="icofont-ui-clock"></i> 1hr 14min
+            </p>
+          </div>
+        </div>
+        <div class="controller">
+          <div class="search-box">
+            <i class="icofont-search"></i>
+            <input type="text" placeholder="Search any song here" />
+          </div>
+          <button><i class="icofont-download"></i></button>
+          <button><i class="icofont-listing-box"></i></button>
+          <select name="sort" id="sort">
+            <option value="date">Date Added</option>
+            <option value="name">Name</option>
+            <option value="plays">Plays</option>
+          </select>
+        </div>
+        <div class="songs-cont" id="songs-cont"></div>
+      </section>
+      <!-- right panel or aside sections -->
+      <section class="right-panel">
+        <div class="notification-bar">
+          <div class="bell-icon"><i class="icofont-bell-alt"></i></div>
+          <p><i class="icofont-crown"></i> <span> Upgrade to Premium</span></p>
+        </div>
+        <section class="top-artist-section">
+          <h2>Top Artist <span>View All</span></h2>
+          <div class="artists">
+            <div class="artist">
+              <div class="imgBox"></div>
+              <div class="desc">
+                <h4>Jacob Jones <i class="icofont-tick-boxed"></i></h4>
+                <p>20K Followers ~ 24M Listener</p>
+              </div>
+            </div>
+            <div class="artist">
+              <div class="imgBox"></div>
+              <div class="desc">
+                <h4>Kathryn Murphy <i class="icofont-tick-boxed"></i></h4>
+                <p>16K Followers ~ 18M Listener</p>
+              </div>
+            </div>
+            <div class="artist">
+              <div class="imgBox"></div>
+              <div class="desc">
+                <h4>Robert Fox <i class="icofont-tick-boxed"></i></h4>
+                <p>12K Followers ~ 10M Listener</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="music-player">
+          <div class="music-player-cont">
+            <div class="cover-img"></div>
+            <h4>Astronaut in the Ocean</h4>
+            <h5>Masked Wolf</h5>
+            <div class="player">
+              <span class="back"><i class="icofont-ui-previous"></i></span>
+              <span class="play"><i class="icofont-play-alt-1"></i></span>
+              <span class="forw"><i class="icofont-ui-next"></i></span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
