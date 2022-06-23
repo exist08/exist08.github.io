@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo"></div>
+        <div id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links-horiz not-active" id="menu">
+          <ul class="navs">
+            <li class="feat">
+              <button>
+                Features <img src="./images/icon-arrow-up.svg" alt="" />
+              </button>
+              <ul class="feat-menu">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="" /><span
+                    >Todo List</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/icon-calendar.svg" alt="" /><span
+                    >Calendar</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="" /><span
+                    >Reminders</span
+                  >
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="" /><span
+                    >Planning</span
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="comp">
+              <button>
+                Company <img src="./images/icon-arrow-up.svg" alt="" />
+              </button>
+              <ul class="comp-menu">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li><button>Careers</button></li>
+            <li><button>About</button></li>
+          </ul>
+          <!--Navs End-->
+          <div class="logup">
+            <button>Login</button>
+            <button>Register</button>
+          </div>
+        </div>
+      </nav>
+      <section class="hero">
+        <aside class="left">
+          <h1> <span>Make </span> remote work</h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <button>Learn more</button>
+          <ul>
+            <li><img src="./images/client-databiz.svg" alt=""></li>
+            <li><img src="./images/client-audiophile.svg" alt=""></li>
+            <li><img src="./images/client-meet.svg" alt=""></li>
+            <li><img src="./images/client-maker.svg" alt=""></li>
+          </ul>
+        </aside>
+        <aside class="right imgBox">
+        </aside>
+      </section>      
+    </main>
+  </body>
+</html>
