@@ -1,0 +1,143 @@
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    width: 600px;
+    height: 450px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+main .imgBox{
+    width: 50%;
+    height: 100%;
+    background-image: url(./images/image-product-desktop.jpg);
+    background-size: cover;
+}
+main .contentBox{
+    width: 50%;
+    height: 100%;
+    background: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .contentBox>*{
+    display: block;
+}
+main .contentBox h1{
+    font-family: 'Fraunces';
+    font-size: 2.2rem;
+}
+main .contentBox p{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+main .contentBox .cream{
+    color: var(--dark-grayish-blue);
+}
+main .contentBox .perf{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+main .contentBox .price-box{
+    font-family: 'Fraunces';
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+main .contentBox .price-box h2{
+    font-size: 2.25rem;
+    padding-right: 2rem;
+    color: var(--dark-cyan);
+}
+main .contentBox .price-box h5{
+    text-decoration:line-through;
+    color: var(--dark-grayish-blue);
+}
+main .contentBox button{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: var(--dark-cyan);
+    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: inherit;
+    transition: .5s;
+}
+main .contentBox button:hover{
+    cursor: pointer;
+    background: hsl(157, 37%, 15%);
+}
+
+main .contentBox button pre{
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:640px) {
+    body{
+        background: hotpink;
+    }
+    main{
+        width: 350px;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+    }
+    main .imgBox{
+        width: 100%;
+        height: 40%;
+        background-image: url(./images/image-product-mobile.jpg);
+    }
+    main .contentBox{
+        width: 100%;
+        height: 60%;
+    }
+
+    main .contentBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    main .contentBox>*{
+        display: block;
+        margin-bottom: .8rem;
+    }
+    
+    main .contentBox .cream{
+        color: var(--dark-grayish-blue);
+        margin-bottom: 1rem;
+    }
+}
