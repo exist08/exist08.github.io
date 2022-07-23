@@ -1,0 +1,1009 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background: #fefeff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+main nav {
+  width: 100%;
+  height: 12vh;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4vw;
+}
+main nav .logo img {
+  width: 223px;
+  height: 46px;
+}
+main nav .nav-menu {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main nav .hamburger {
+  display: none;
+}
+main nav .nav-menu ul.nav-links {
+  display: flex;
+  color: #534e4e;
+  list-style: none;
+}
+main nav .nav-menu ul.nav-links li {
+  transition: 0.3s;
+  padding: 0 1pc;
+}
+main nav .nav-menu ul.nav-links li img {
+  width: 7px;
+}
+main nav .nav-menu ul.nav-links li:hover {
+  background: #80144a;
+  cursor: pointer;
+}
+main nav .nav-menu ul.log-up-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #534e4e;
+  list-style: none;
+}
+main nav .nav-menu ul.log-up-in li {
+  padding: 0 1pc;
+}
+main nav .nav-menu ul.log-up-in li button {
+  font-weight: 700;
+  background: none;
+  text-decoration: none;
+  border: none;
+  color: #534e4e;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+main nav .nav-menu ul.log-up-in li button.not-active:hover {
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  background: #f24c62;
+  color: #efeeee;
+}
+main nav .nav-menu ul.log-up-in li button.active {
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  background: #f24c62;
+  color: #efeeee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+@media screen and (max-width: 1150px) {
+  main nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+  }
+  main nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+  }
+  main nav .hamburger span {
+    width: 30px;
+    height: 3px;
+    background: black;
+    display: block;
+    transition: 0.5s;
+  }
+  main nav .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(15px);
+  }
+  main nav .hamburger.active span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(360deg) translateX(-100px);
+  }
+  main nav .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px);
+  }
+  main nav .nav-menu.active {
+    top: 12vh;
+    opacity: 1;
+    transition: 0.5s;
+    width: 100%;
+  }
+  main nav .nav-menu {
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    right: 0;
+    top: -88vh;
+    height: 88vh;
+    width: 100%;
+    background: #180d23;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #efeeee;
+  }
+  main nav .nav-menu ul.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    list-style: none;
+  }
+  main nav .nav-menu ul.nav-links li {
+    padding: 1pc 1pc;
+  }
+  main nav .nav-menu ul.nav-links li img {
+    width: 7px;
+    filter: invert(1);
+  }
+  main nav .nav-menu ul.log-up-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #534e4e;
+    list-style: none;
+  }
+  main nav .nav-menu ul.log-up-in li {
+    padding: 1pc 1pc;
+  }
+  main nav .nav-menu ul.log-up-in li button {
+    color: #534e4e;
+    font-size: 18px;
+  }
+  main nav .nav-menu ul.log-up-in li button.active {
+    margin-bottom: 2pc;
+    padding: 0.75rem 2rem;
+  }
+}
+main section.go-for-demo {
+  width: 100%;
+  height: 500px;
+  background-image: url(images/ezgif.com-gif-maker-vr.jpg);
+  background-size: cover;
+  background-position: right;
+  color: #fcfcfc;
+  padding: 3rem 4rem;
+  font-size: 22px;
+}
+main section.go-for-demo h1 {
+  width: 600px;
+  margin-bottom: 1.5rem;
+}
+main section.go-for-demo h1 span {
+  font-size: 1.2em;
+}
+main section.go-for-demo p {
+  width: 600px;
+  margin-bottom: 4em;
+}
+main section.go-for-demo button {
+  background: linear-gradient(#fc0002, #c41c73);
+  width: 241px;
+  height: 66px;
+  border-radius: 40px;
+  font-size: 1.5rem;
+  color: #efeeee;
+}
+@media screen and (max-width: 769px) {
+  main section.go-for-demo {
+    height: 500px;
+    background-image: url(images/Mobile\ view.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    font-size: 18px;
+  }
+  main section.go-for-demo h1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  main section.go-for-demo h1 span {
+    font-size: 1.2em;
+  }
+  main section.go-for-demo p {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  main section.go-for-demo button {
+    margin: 0 auto;
+    background: linear-gradient(#fc0002, #c41c73);
+    border-radius: 40px;
+    width: unset;
+    height: unset;
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    color: #efeeee;
+  }
+}
+main section.one-stop-solu {
+  width: 100%;
+  height: 700px;
+  color: #005070;
+  padding: 3rem 4rem;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+main section.one-stop-solu .h1-n-para h1 {
+  width: 420px;
+  margin-bottom: 1.5rem;
+}
+main section.one-stop-solu .h1-n-para h1 span {
+  font-size: 1.2em;
+}
+main section.one-stop-solu .h1-n-para p {
+  width: 620px;
+}
+main section.one-stop-solu .img-Dota {
+  width: 700px;
+  height: 393px;
+  background-image: url(images/dota.jpg);
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+main section.one-stop-solu .img-Sniper {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(70%, -20%);
+  width: 461px;
+  height: 260px;
+  background-image: url(images/sniper.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+@media screen and (max-width: 1150px) {
+  main section.one-stop-solu {
+    width: 100%;
+    height: 900px;
+    color: #005070;
+    padding: 3rem 4rem;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: unset;
+    gap: 20px;
+  }
+  main section.one-stop-solu .h1-n-para h1 {
+    width: 420px;
+    margin-bottom: 1.5rem;
+  }
+  main section.one-stop-solu .h1-n-para h1 span {
+    font-size: 1.2em;
+  }
+  main section.one-stop-solu .h1-n-para p {
+    width: 620px;
+  }
+  main section.one-stop-solu .img-Dota {
+    margin-left: auto;
+    width: 700px;
+    height: 393px;
+    background-image: url(images/dota.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  }
+  main section.one-stop-solu .img-Sniper {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(5%, -100%);
+    width: 461px;
+    height: 260px;
+    background-image: url(images/sniper.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 869px) {
+  main section.one-stop-solu {
+    width: 100%;
+    height: auto;
+    color: #005070;
+    padding: 3rem 2rem;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: unset;
+    gap: 20px 0;
+  }
+  main section.one-stop-solu .h1-n-para h1 {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  main section.one-stop-solu .h1-n-para h1 span {
+    font-size: 1.2em;
+  }
+  main section.one-stop-solu .h1-n-para p {
+    width: 100%;
+  }
+  main section.one-stop-solu .img-Dota {
+    margin-left: auto;
+    width: 100%;
+    aspect-ratio: 700/390;
+    height: auto;
+    background-image: url(images/dota.jpg);
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 100px;
+  }
+  main section.one-stop-solu .img-Sniper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(5%, 100%);
+    width: 80%;
+    height: auto;
+    aspect-ratio: 46/26;
+    background-image: url(images/sniper.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+}
+main section.challenge-other {
+  width: 100%;
+  height: 550px;
+  color: #005070;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+  background: linear-gradient(90deg, #ebebeb, #e19614);
+}
+main section.challenge-other .h1-para-btn {
+  width: 40%;
+}
+main section.challenge-other .h1-para-btn h1 {
+  margin-bottom: 1em;
+}
+main section.challenge-other .h1-para-btn p {
+  margin-bottom: 2em;
+  width: 95%;
+}
+main section.challenge-other .h1-para-btn button {
+  font-size: 22px;
+  background: linear-gradient(#066991, #02445e);
+  color: #ebebeb;
+  text-decoration: none;
+  font-family: inherit;
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 30px;
+}
+main section.challenge-other .img-Valo {
+  width: 50%;
+  height: 427px;
+  background-image: url(images/valo.jpg);
+  background-size: cover;
+  box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  position: relative;
+}
+main section.challenge-other .img-Valo .valo-Chat {
+  position: absolute;
+  right: -10%;
+  bottom: -10%;
+  width: 153px;
+  height: 375px;
+  background-image: url(images/chats.png);
+  background-size: cover;
+  box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+@media screen and (max-width: 1150px) {
+  main section.challenge-other {
+    width: 100%;
+    height: auto;
+    color: #005070;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 0.5em;
+    background: linear-gradient(90deg, #ebebeb, #e19614);
+  }
+  main section.challenge-other .h1-para-btn {
+    padding: 2em 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  main section.challenge-other .h1-para-btn h1 {
+    margin-bottom: 1em;
+  }
+  main section.challenge-other .h1-para-btn p {
+    margin-bottom: 2em;
+    width: 95%;
+  }
+  main section.challenge-other .h1-para-btn button {
+    font-size: 22px;
+    background: linear-gradient(#066991, #02445e);
+    color: #ebebeb;
+    text-decoration: none;
+    font-family: inherit;
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 30px;
+    margin: auto;
+  }
+  main section.challenge-other .img-Valo {
+    width: 90%;
+    aspect-ratio: 1280/720;
+    height: auto;
+    background-image: url(images/valo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: relative;
+  }
+  main section.challenge-other .img-Valo .valo-Chat {
+    position: absolute;
+    right: -10%;
+    bottom: -10%;
+    width: 20%;
+    aspect-ratio: 15/37;
+    height: auto;
+    background-image: url(images/chats.png);
+    background-size: cover;
+    box-shadow: -5px -5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+}
+main section.chrtble-donations {
+  width: 100%;
+  height: 520px;
+  color: #005070;
+  font-size: 22px;
+  display: flex;
+}
+main section.chrtble-donations .h1-n-para {
+  width: 40%;
+  padding: 1em 3vw;
+}
+main section.chrtble-donations .h1-n-para h1 {
+  width: 420px;
+  margin-bottom: 2em;
+}
+main section.chrtble-donations .h1-n-para h1 span {
+  font-size: 1.2em;
+}
+main section.chrtble-donations .h1-n-para p {
+  width: 390px;
+}
+main section.chrtble-donations .img-Cars {
+  width: 60%;
+  height: 100%;
+  background-image: url(images/car-racing.jpg);
+  background-size: cover;
+  position: relative;
+}
+main section.chrtble-donations .img-Cars .donation-tab {
+  position: absolute;
+  top: 30%;
+  bottom: 25%;
+  left: -15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 50%;
+}
+main section.chrtble-donations .img-Cars .donation-tab button {
+  font-size: 22px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #efeeee;
+  outline: none;
+  color: #fefeff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+main section.chrtble-donations .img-Cars .donation-tab button:nth-child(1) {
+  background: linear-gradient(#8cd59d, #442c68);
+}
+main section.chrtble-donations .img-Cars .donation-tab button:nth-child(2) {
+  background: linear-gradient(#a98cd5, #442c68);
+}
+main section.chrtble-donations .img-Cars .donation-tab button:nth-child(3) {
+  background: linear-gradient(#dc9a15, #6e4d0b);
+}
+main section.chrtble-donations .img-Cars .donation-tab button:nth-child(4) {
+  background: linear-gradient(#e24d4d, #880303);
+}
+@media screen and (max-width: 1150px) {
+  main section.chrtble-donations {
+    width: 100%;
+    height: auto;
+    color: #005070;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  main section.chrtble-donations .h1-n-para {
+    width: 100%;
+    padding: 1em 2em;
+  }
+  main section.chrtble-donations .h1-n-para h1 {
+    width: 100%;
+    margin-bottom: 0.7em;
+  }
+  main section.chrtble-donations .h1-n-para h1 span {
+    font-size: 1.2em;
+  }
+  main section.chrtble-donations .h1-n-para p {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  main section.chrtble-donations .img-Cars {
+    width: 90%;
+    aspect-ratio: 1280/720;
+    height: auto;
+    background-image: url(images/car-racing.jpg);
+    background-size: cover;
+    position: relative;
+  }
+  main section.chrtble-donations .img-Cars .donation-tab {
+    position: absolute;
+    top: 10%;
+    bottom: 25%;
+    left: -15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 60%;
+  }
+  main section.chrtble-donations .img-Cars .donation-tab button {
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    border: 2px solid #efeeee;
+    outline: none;
+    color: #fefeff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 769px) {
+  main section.chrtble-donations {
+    width: 100%;
+    height: auto;
+    color: #005070;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+  }
+  main section.chrtble-donations .h1-n-para {
+    width: 100%;
+    padding: 1em 2em;
+  }
+  main section.chrtble-donations .h1-n-para h1 {
+    width: 100%;
+    margin-bottom: 0.7em;
+  }
+  main section.chrtble-donations .h1-n-para h1 span {
+    font-size: 1.2em;
+  }
+  main section.chrtble-donations .h1-n-para p {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+  main section.chrtble-donations .img-Cars {
+    width: 80%;
+    aspect-ratio: 1280/720;
+    height: auto;
+    background-image: url(images/car-racing.jpg);
+    background-size: cover;
+    position: relative;
+  }
+  main section.chrtble-donations .img-Cars .donation-tab {
+    position: absolute;
+    top: 10%;
+    bottom: 25%;
+    left: -35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 70%;
+  }
+  main section.chrtble-donations .img-Cars .donation-tab button {
+    font-size: 12px;
+    width: 100px;
+    height: 25px;
+    border: 2px solid #efeeee;
+    outline: none;
+    color: #fefeff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+main section.alive-excitement {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  color: #005070;
+  font-size: 22px;
+  line-height: 22px;
+  padding: 9em 0 1em 5em;
+  margin-top: -155px;
+  background-image: url(images/ezgif.com-gif-maker-chinese.png);
+  background-size: 100%;
+}
+main section.alive-excitement h1 {
+  margin-bottom: 1.65em;
+}
+main section.alive-excitement h1 span {
+  font-size: 1.2em;
+}
+main section.alive-excitement p {
+  width: 620px;
+  margin-bottom: 3em;
+  line-height: 1.3em;
+}
+main section.alive-excitement .btn-cont {
+  text-align: center;
+}
+main section.alive-excitement button {
+  font-size: 22px;
+  background: linear-gradient(#066991, #02445e);
+  color: #ebebeb;
+  text-decoration: none;
+  font-family: inherit;
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 30px;
+  margin: auto;
+}
+@media screen and (max-width: 1150px) {
+  main section.alive-excitement {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    color: #005070;
+    font-size: 22px;
+    line-height: 22px;
+    padding: 9em 0 1em 2em;
+    margin-top: -155px;
+    background-image: url(images/ezgif.com-gif-maker-chinese.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+  main section.alive-excitement h1 {
+    margin-bottom: 1.65em;
+  }
+  main section.alive-excitement h1 span {
+    font-size: 1.2em;
+  }
+  main section.alive-excitement p {
+    width: 40%;
+    margin-bottom: 3em;
+    line-height: 1.3em;
+  }
+  main section.alive-excitement .btn-cont {
+    text-align: center;
+  }
+  main section.alive-excitement button {
+    font-size: 22px;
+    background: linear-gradient(#066991, #02445e);
+    color: #ebebeb;
+    text-decoration: none;
+    font-family: inherit;
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 30px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 769px) {
+  main section.alive-excitement {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    color: #005070;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 90% 1em 1em 2em;
+    margin-top: -50px;
+    background-image: url(images/chinese-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+  }
+  main section.alive-excitement p {
+    width: 100%;
+  }
+  main section.alive-excitement button {
+    font-size: 16px;
+    padding: 0.5em 3em;
+  }
+}
+main section.services {
+  width: 100%;
+  height: 600px;
+  color: #005070;
+  font-size: 22px;
+  padding: 2em 2vw;
+}
+main section.services h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+main section.services .service-cards {
+  display: flex;
+  justify-content: space-between;
+}
+main section.services .service-cards .card {
+  width: 430px;
+  height: 400px;
+}
+main section.services .service-cards .card .imgBox {
+  background-image: url(images/bros-game.jpg);
+  width: 100%;
+  height: 280px;
+  background-size: cover;
+  border-radius: 25px;
+  border: 2px solid gray;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-position: center;
+}
+main section.services .service-cards .card h2 {
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+main section.services .service-cards .card:nth-child(2) .imgBox {
+  background-image: url(images/Analytics6.jpg);
+}
+main section.services .service-cards .card:nth-child(3) .imgBox {
+  background-image: url(images/ezgif.com-gif-maker-cms.jpg);
+}
+@media screen and (max-width: 1150px) {
+  main section.services {
+    width: 100%;
+    height: unset;
+    color: #005070;
+    font-size: 18px;
+    padding: 1em 2em;
+  }
+  main section.services h1 {
+    text-align: center;
+    margin-bottom: 0.25em;
+  }
+  main section.services .service-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main section.services .service-cards .card {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  main section.services .service-cards .card .imgBox {
+    background-image: url(images/bros-game.jpg);
+    width: 100%;
+    aspect-ratio: 43/28;
+    height: auto;
+    background-size: cover;
+    border-radius: 5px;
+    border: 2px solid gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-position: center;
+  }
+  main section.services .service-cards .card h2 {
+    text-align: center;
+    margin-bottom: 0.3em;
+  }
+}
+@media screen and (max-width: 769px) {
+  main section.services {
+    font-size: 16px;
+  }
+}
+main section.testimonials {
+  width: 100%;
+  height: 600px;
+  color: #005070;
+  font-size: 22px;
+  padding: 2em 3em;
+}
+main section.testimonials h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+footer {
+  height: 450px;
+  width: 100%;
+  background: #343232;
+  color: #ebebeb;
+  display: flex;
+  justify-content: space-around;
+  padding: 4rem 2rem;
+  position: relative;
+}
+footer > p.copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translate(30%, -800%);
+  font-size: 12px;
+}
+footer > div {
+  width: 15%;
+}
+footer .linksCols {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .linksCols h4 {
+  font-weight: 400;
+  padding-bottom: 0.75em;
+  border-bottom: 3px solid #d1263d;
+  display: inline;
+}
+footer .linksCols a {
+  text-decoration: none;
+  color: #ebebeb;
+  padding-bottom: 0.75em;
+}
+footer .col-6 ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+footer .col-6 ul li {
+  width: 40px;
+  height: 40px;
+  background: #534e4e;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  margin: 0 0.3em;
+}
+footer .col-6 ul li img {
+  width: 50%;
+  filter: invert(1);
+}
+footer .col-1 .logo img {
+  width: 140px;
+  filter: invert(1);
+}
+footer .col-1 p {
+  font-size: 0.67em;
+  padding: 1.5em 0;
+}
+footer .col-1 a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+footer .col-1 a pre {
+  text-decoration: none;
+}
+@media screen and (max-width: 850px) {
+  footer {
+    height: auto;
+    width: 100%;
+    background: #343232;
+    color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 2rem;
+  }
+  footer > p.copyright {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -200%);
+    font-size: 12px;
+  }
+  footer > div {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  footer .linksCols {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .linksCols h4 {
+    font-weight: 400;
+    padding-bottom: 0.75em;
+    display: inline;
+  }
+  footer .linksCols a {
+    text-decoration: none;
+    color: #ebebeb;
+    padding-bottom: 0.75em;
+  }
+  footer .col-6 h3 {
+    padding: 0.5em 0;
+  }
+  footer .col-6 ul {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+  footer .col-6 ul li {
+    width: 40px;
+    height: 40px;
+    background: #534e4e;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin: 0 0.3em;
+  }
+  footer .col-6 ul li img {
+    width: 50%;
+    filter: invert(1);
+  }
+  footer .col-1 .logo img {
+    width: 140px;
+    filter: invert(1);
+  }
+  footer .col-1 p {
+    font-size: 0.67em;
+  }
+  footer .col-1 a {
+    text-decoration: none;
+    color: #ebebeb;
+  }
+  footer .col-1 a pre {
+    text-decoration: none;
+  }
+}
