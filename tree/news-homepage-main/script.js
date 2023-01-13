@@ -8,6 +8,7 @@ menuIcon.addEventListener('click',() => {
     closeIcon.style.transform = 'translateX(0px)';
     menuIcon.style.display = 'none';
     navMenu.classList.add('active')
+    document.body.style.touchAction = 'none';
 })
 closeIcon.addEventListener('click',() => {
     menuIcon.style.display = 'block';
@@ -15,4 +16,5 @@ closeIcon.addEventListener('click',() => {
     closeIcon.style.transform = 'translateX(100px)';
     closeIcon.style.display = 'none';
     navMenu.classList.remove('active')
+    document.body.style.touchAction = 'auto';
 })
