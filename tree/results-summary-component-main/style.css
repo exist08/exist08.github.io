@@ -137,6 +137,18 @@ body{
 
 @media screen and (width<768px){
     body{
-        background: lawngreen;
+        display: block;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+        border-radius: 0;
+    }
+    .left{
+        width: 100%;
+        border-radius: 0 0 40px 40px;
+    }
+    .right{
+        width: 100%;
     }
 }
