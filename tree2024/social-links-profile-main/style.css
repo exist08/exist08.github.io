@@ -1,0 +1,92 @@
+:root{
+    --green: hsl(75, 94%, 57%);
+
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.inter {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(0, 0%, 8%);
+}
+.profile-card{
+    width: 400px;
+    min-height: 60vh;
+    border-radius: 10px;
+    background: hsl(0, 0%, 12%);
+    padding: 2rem;
+    color: white;
+}
+.links{
+    width: 100%;
+    height: auto;
+}
+.profile-card .desc{
+    text-align: center;
+}
+.profile-card .desc>img{
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.profile-card .desc h1{
+    font-size: 1.5rem;
+}
+.profile-card .desc h1+.addr{
+    font-size: .85rem;
+    font-weight: 700;
+    color: var(--green);
+    display: block;
+    margin: .85rem 0 2rem;
+}
+.profile-card .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+.profile-card .links a{
+    width: 100%;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    background: hsl(0, 0%, 20%);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    transition: background .5s, color .3s;
+}
+.profile-card .links a:hover{
+    background: var(--green);
+    color: hsl(0, 0%, 8%);
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        padding: 1.5rem;
+    }
+    .profile-card{
+        width: 100%;
+        padding: 1.5rem;
+    }
+    
+}
